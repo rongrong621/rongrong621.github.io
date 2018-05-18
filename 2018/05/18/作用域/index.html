@@ -80,17 +80,17 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="作用域和闭包作用域==&amp;gt;   用来管理标识符可以在什么情况下被访问和修改的一套规则。  JS引擎不会上来就开始执行每一行代码。 首先 编译器 会逐行解析代码，并且对每一行代码进行编译 先找到 var 和 function 这两个标识符 然后：   问作用域，当前作用域注册过 变量 a 么？ 作用域 告诉  编译器  没有 那么 就声明一个变量  a，并且把 var 声明的 变量提升到代码最前">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2018/05/18/hello-world/index.html">
+<meta property="og:title" content="JS作用域">
+<meta property="og:url" content="http://yoursite.com/2018/05/18/作用域/index.html">
 <meta property="og:site_name" content="玉亭(婷)湖畔">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="作用域和闭包作用域==&amp;gt;   用来管理标识符可以在什么情况下被访问和修改的一套规则。  JS引擎不会上来就开始执行每一行代码。 首先 编译器 会逐行解析代码，并且对每一行代码进行编译 先找到 var 和 function 这两个标识符 然后：   问作用域，当前作用域注册过 变量 a 么？ 作用域 告诉  编译器  没有 那么 就声明一个变量  a，并且把 var 声明的 变量提升到代码最前">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2017-10-28T00:39:58.000Z">
+<meta property="og:updated_time" content="2018-05-18T10:11:25.710Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="JS作用域">
+<meta name="twitter:description" content="作用域和闭包作用域==&amp;gt;   用来管理标识符可以在什么情况下被访问和修改的一套规则。  JS引擎不会上来就开始执行每一行代码。 首先 编译器 会逐行解析代码，并且对每一行代码进行编译 先找到 var 和 function 这两个标识符 然后：   问作用域，当前作用域注册过 变量 a 么？ 作用域 告诉  编译器  没有 那么 就声明一个变量  a，并且把 var 声明的 变量提升到代码最前">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/18/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/18/作用域/"/>
 
 
 
 
 
-  <title>Hello World | 玉亭(婷)湖畔</title>
+  <title>JS作用域 | 玉亭(婷)湖畔</title>
   
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/18/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/18/作用域/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="氧气柠檬🍭">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">JS作用域</h1>
         
 
         <div class="post-meta">
@@ -272,7 +272,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-18T15:23:11+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-18T18:07:32+08:00">
                 2018-05-18
               </time>
             
@@ -315,15 +315,62 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="作用域和闭包"><a href="#作用域和闭包" class="headerlink" title="作用域和闭包"></a>作用域和闭包</h1><h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>==&gt;   用来管理标识符可以在什么情况下被访问和修改的一套规则。</p>
+<ul>
+<li>JS引擎不会上来就开始执行每一行代码。</li>
+<li>首先 编译器 会逐行解析代码，并且对每一行代码进行编译</li>
+<li>先找到 var 和 function 这两个标识符</li>
+<li>然后：</li>
+</ul>
+<ol>
+<li>问作用域，当前作用域注册过 变量 a 么？</li>
+<li>作用域 告诉  编译器  没有</li>
+<li>那么 就声明一个变量  a，并且把 var 声明的 变量提升到代码最前面</li>
+<li>然后发现没有其它 var 或者 funciton 了</li>
+<li>编译完成每行代码，JS引擎开始逐行执行</li>
+</ol>
+<blockquote>
+<p>作用域 分为 全局作用域和局部作用域（通常只函数作用域）</p>
+</blockquote>
+<h2 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h2><blockquote>
+<p>当作用域互相嵌套的时候，那么会形成作用域链。</p>
+<p>作用域链：规定了局部作用域可以访问外部作用域的标识符，但是外部作用域不能访问局部作用域里面的标识符</p>
+</blockquote>
+<pre><code><figure class="highlight plain"><figcaption><span>a </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">```function fn () &#123;</span><br><span class="line">只要进入了新的作用域，那么会重新的进行 预编译，然后在执行每一行代码</span><br><span class="line">   console.log(a);   // undefined</span><br><span class="line">  var a = 1</span><br><span class="line">    console.log(a);  // 1</span><br><span class="line">   a = 10</span><br><span class="line">   return</span><br><span class="line">   var a = 3;</span><br><span class="line">   console.log(a);</span><br><span class="line">  &#125;</span><br><span class="line"> fn ()</span><br></pre></td></tr></table></figure>
+
+
+
+var a = 1;
+ function fn1() {
+  fn2()
+  function fn2 () {
+   console.log(a + 1);
+   }
+}
+
+fn1()  // 2<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">   </span><br><span class="line"></span><br><span class="line">## 闭包 ##</span><br><span class="line"></span><br><span class="line">&gt; 函数就是闭包。只不过多发生在作用域嵌套的时候，当前这个函数可以记住它声明的时候的那个作用域，并且可以访问那个作用域的标识符，就形成了闭包。</span><br><span class="line">&gt; 闭包就是能够读取其他函数内部变量的函数。</span><br><span class="line">代码实例如下：</span><br><span class="line">闭包（父函数的参数或者变量不被回收）:</span><br><span class="line">函数套函数，子函数引用了父函数的参数或者变量，就形成闭包环境</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">```var f;</span><br><span class="line">   function fn1 () &#123;</span><br></pre></td></tr></table></figure>
+</code></pre><figure class="highlight plain"><figcaption><span>a </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function fn2 () &#123;</span><br><span class="line">     console.log(a);</span><br><span class="line">&#125;</span><br><span class="line">f = fn2</span><br><span class="line">&#125;</span><br><span class="line"> fn1()</span><br><span class="line">console.log(a);</span><br></pre></td></tr></table></figure>
+<p>   <code>f()</code></p>
+<p>函数自执行</p>
+<pre><code>;(function (){
+console.log(&apos;ok&apos;);
+})();
+</code></pre><hr>
+<p>JS存放数据主要分为3个部分：</p>
+<ol>
+<li><p>静态区域：主要存放全局的变量，只要浏览器不关闭或者不手动指向null，那么这个变量就会一直存在。</p>
+</li>
+<li><p>栈：凡是可以被自动释放的变量都存放在这里</p>
+</li>
+<li><p>堆：复杂的数据类型一般都存放在这里，不会被自动释放</p>
+<ul>
+<li><ul>
+<li>浏览器的JS引擎都存在 垃圾回收 机制，由垃圾回收器定时释放</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
 
       
     </div>
@@ -377,15 +424,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/05/18/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/18/作用域/" rel="prev" title="JS作用域">
-                JS作用域 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -519,7 +566,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#作用域和闭包"><span class="nav-number">1.</span> <span class="nav-text">作用域和闭包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#作用域"><span class="nav-number">1.1.</span> <span class="nav-text">作用域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用域链"><span class="nav-number">1.2.</span> <span class="nav-text">作用域链</span></a></li></ol></li></ol></div>
             
 
           </div>
