@@ -80,17 +80,17 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="Object.prototype.toString在 JavaScript 里使用 typeof 来判断数据类型，只能区分基本类型，即 “number”，”string”，”undefined”，”boolean”，”object” 五种。  对于数组、函数、对象来说，其关系错综复杂，使用 typeof 都会统一返回 “object” 字符串。 要想区别对象、数组、函数单纯使用 typeof 是不">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2018/05/18/hello-world/index.html">
+<meta property="og:title" content="面向对象(二)">
+<meta property="og:url" content="http://yoursite.com/2018/05/31/面向对象(二)/index.html">
 <meta property="og:site_name" content="Little luck">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Object.prototype.toString在 JavaScript 里使用 typeof 来判断数据类型，只能区分基本类型，即 “number”，”string”，”undefined”，”boolean”，”object” 五种。  对于数组、函数、对象来说，其关系错综复杂，使用 typeof 都会统一返回 “object” 字符串。 要想区别对象、数组、函数单纯使用 typeof 是不">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2017-10-28T00:39:58.000Z">
+<meta property="og:updated_time" content="2018-05-31T06:40:34.503Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="面向对象(二)">
+<meta name="twitter:description" content="Object.prototype.toString在 JavaScript 里使用 typeof 来判断数据类型，只能区分基本类型，即 “number”，”string”，”undefined”，”boolean”，”object” 五种。  对于数组、函数、对象来说，其关系错综复杂，使用 typeof 都会统一返回 “object” 字符串。 要想区别对象、数组、函数单纯使用 typeof 是不">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/18/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/31/面向对象(二)/"/>
 
 
 
 
 
-  <title>Hello World | Little luck</title>
+  <title>面向对象(二) | Little luck</title>
   
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/18/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/31/面向对象(二)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="氧气柠檬🍭">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">面向对象(二)</h1>
         
 
         <div class="post-meta">
@@ -272,8 +272,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-18T15:23:11+08:00">
-                2018-05-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-31T14:08:27+08:00">
+                2018-05-31
               </time>
             
 
@@ -315,15 +315,38 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h2 id="Object-prototype-toString"><a href="#Object-prototype-toString" class="headerlink" title="Object.prototype.toString"></a>Object.prototype.toString</h2><p>在 JavaScript 里使用 typeof 来判断数据类型，只能区分基本类型，即 “number”，”string”，”undefined”，”boolean”，”object” 五种。</p>
+<p> 对于数组、函数、对象来说，其关系错综复杂，使用 typeof 都会统一返回 “object” 字符串。</p>
+<p>要想区别对象、数组、函数单纯使用 typeof 是不行的，JavaScript中,通过Object.prototype.toString方法，判断某个对象值属于哪种内置类型。</p>
+<p>由于 JavaScript 中一切都是对象，任何都不例外，对所有值类型应用 Object.prototype.toString.call() 方法结果如下：</p>
+<p>Object.prototype.toString.call()方法浅谈<br>使用Object.prototype上的原生toString()方法判断数据类型，使用方法如下：</p>
+<p>Object.prototype.toString.call(value)<br>1.判断基本类型：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Object.prototype.toString.call(null);//”[object Null]”</span><br><span class="line">Object.prototype.toString.call(undefined);//”[object Undefined]”</span><br><span class="line">Object.prototype.toString.call(“abc”);//”[object String]”</span><br><span class="line">Object.prototype.toString.call(123);//”[object Number]”</span><br><span class="line">Object.prototype.toString.call(true);//”[object Boolean]”</span><br></pre></td></tr></table></figure></p>
+<p>2.判断原生引用类型：<br>    函数类型<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Function fn()&#123;console.log(“test”);&#125;</span><br><span class="line">Object.prototype.toString.call(fn);//”[object Function]”</span><br></pre></td></tr></table></figure></p>
+<p>  日期类型</p>
+<pre><code>Function fn(){console.log(“test”);}
+Object.prototype.toString.call(fn);//”[object Function]”
+</code></pre><p>   数组类型</p>
+<pre><code>var arr = [1,2,3];
+Object.prototype.toString.call(arr);//”[object Array]”
+</code></pre><p>正则表达式</p>
+<pre><code>var reg = /[hbc]at/gi;
+Object.prototype.toString.call(arr);//”[object Array]”
+</code></pre><p>自定义类型</p>
+<pre><code>function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+var person = new Person(&quot;Rose&quot;, 18);
+Object.prototype.toString.call(arr); //”[object Object]”
+很明显这种方法不能准确判断person是Person类的实例，而只能用instanceof 操作符来进行判断，如下所示：
+console.log(person instanceof Person);//输出结果为true
+</code></pre><p> 3.判断原生JSON对象：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var isNativeJSON = window.JSON &amp;&amp; Object.prototype.toString.call(JSON);</span><br><span class="line">console.log(isNativeJSON);//输出结果为”[object JSON]”说明JSON是原生的，否则不是；</span><br></pre></td></tr></table></figure></p>
+<h2 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h2><blockquote>
+<p>我们知道，默认情况下，对一个函数前面使用new，可以构造出一个对象。每一个对象都有一个constructor属性，这个constructor属性指向构造出该对象的函数。</p>
+</blockquote>
+<blockquote>
+<p>这个属性是理解JavaScript类和继承的重要基础<br>实例化对象.constructor = 实例化对象的构造函数<br>注意：不是100%准确，容易被修改。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 等价于 var foo = new Array(1, 56, 34, 12); </span><br><span class="line">var arr = [1, 56, 34, 12]; </span><br><span class="line">console.log(arr.constructor === Array); // true </span><br><span class="line">// 等价于 var foo = new Function(); </span><br><span class="line">var Foo = function() &#123; &#125;; </span><br><span class="line">console.log(Foo.constructor === Function); // true </span><br><span class="line">// 由构造函数实例化一个obj对象 </span><br><span class="line">var obj = new Foo(); </span><br><span class="line">console.log(obj.constructor === Foo); // true </span><br><span class="line">// 将上面两段代码合起来，就得到下面的结论 </span><br><span class="line">console.log(obj.constructor.constructor === Function); // true</span><br></pre></td></tr></table></figure></p>
+</blockquote>
 
       
     </div>
@@ -385,15 +408,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/05/31/面向对象(一)/" rel="next" title="面向对象(一)">
+                <i class="fa fa-chevron-left"></i> 面向对象(一)
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/29/封装数组的方法/" rel="prev" title="数组封装方法">
-                数组封装方法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -527,7 +550,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-prototype-toString"><span class="nav-number">1.</span> <span class="nav-text">Object.prototype.toString</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#constructor-NaN"><span class="nav-number">2.</span> <span class="nav-text">constructor</span></a></li></ol></div>
             
 
           </div>
