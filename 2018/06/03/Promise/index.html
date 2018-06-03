@@ -80,17 +80,17 @@
 
 
 
-<meta name="description" content="本地存储 localStorage  （长期存储） localStorage生命周期是永久，这意味着除非用户显示在浏览器提供的UI上清除localStorage信息，否则这些信息将永远存在。存放数据大小为一般为5MB,而且它仅在客户端（即浏览器）中保存，不参与和服务器的通信。  JSON.stringify()   =&amp;gt;对象转JSON JSON.parse（)      =&amp;gt;JSON转">
+<meta name="description" content="定义 Promise主要用于异步处理，用来解决传统的回调地狱问题。 在实际项目中可以用来处理异步函数，以及多个异步操作的处理，在异步处理中定义异步方法(如ajax),在.then方法中处理结果，使得逻辑更清晰，更易于维护，而不是使用函数嵌套函数的方式。  所谓Promise，简单说就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果。  Promise是一个对象，从它可以获取">
 <meta property="og:type" content="article">
-<meta property="og:title" content="本地存储">
-<meta property="og:url" content="http://yoursite.com/2018/05/29/本地存储/index.html">
+<meta property="og:title" content="Promise">
+<meta property="og:url" content="http://yoursite.com/2018/06/03/Promise/index.html">
 <meta property="og:site_name" content="Little luck">
-<meta property="og:description" content="本地存储 localStorage  （长期存储） localStorage生命周期是永久，这意味着除非用户显示在浏览器提供的UI上清除localStorage信息，否则这些信息将永远存在。存放数据大小为一般为5MB,而且它仅在客户端（即浏览器）中保存，不参与和服务器的通信。  JSON.stringify()   =&amp;gt;对象转JSON JSON.parse（)      =&amp;gt;JSON转">
+<meta property="og:description" content="定义 Promise主要用于异步处理，用来解决传统的回调地狱问题。 在实际项目中可以用来处理异步函数，以及多个异步操作的处理，在异步处理中定义异步方法(如ajax),在.then方法中处理结果，使得逻辑更清晰，更易于维护，而不是使用函数嵌套函数的方式。  所谓Promise，简单说就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果。  Promise是一个对象，从它可以获取">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-29T10:01:17.686Z">
+<meta property="og:updated_time" content="2018-06-03T12:08:06.153Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="本地存储">
-<meta name="twitter:description" content="本地存储 localStorage  （长期存储） localStorage生命周期是永久，这意味着除非用户显示在浏览器提供的UI上清除localStorage信息，否则这些信息将永远存在。存放数据大小为一般为5MB,而且它仅在客户端（即浏览器）中保存，不参与和服务器的通信。  JSON.stringify()   =&amp;gt;对象转JSON JSON.parse（)      =&amp;gt;JSON转">
+<meta name="twitter:title" content="Promise">
+<meta name="twitter:description" content="定义 Promise主要用于异步处理，用来解决传统的回调地狱问题。 在实际项目中可以用来处理异步函数，以及多个异步操作的处理，在异步处理中定义异步方法(如ajax),在.then方法中处理结果，使得逻辑更清晰，更易于维护，而不是使用函数嵌套函数的方式。  所谓Promise，简单说就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果。  Promise是一个对象，从它可以获取">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/29/本地存储/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/03/Promise/"/>
 
 
 
 
 
-  <title>本地存储 | Little luck</title>
+  <title>Promise | Little luck</title>
   
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/29/本地存储/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/03/Promise/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="氧气柠檬🍭">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">本地存储</h1>
+          <h1 class="post-title" itemprop="name headline">Promise</h1>
         
 
         <div class="post-meta">
@@ -272,8 +272,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-29T17:57:26+08:00">
-                2018-05-29
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-03T20:07:11+08:00">
+                2018-06-03
               </time>
             
 
@@ -315,27 +315,46 @@
       
 
       
-        <h1 id="本地存储"><a href="#本地存储" class="headerlink" title="本地存储"></a>本地存储</h1><hr>
-<h2 id="localStorage-（长期存储）"><a href="#localStorage-（长期存储）" class="headerlink" title="localStorage  （长期存储）"></a>localStorage  （长期存储）</h2><blockquote>
-<p>localStorage生命周期是永久，这意味着除非用户显示在浏览器提供的UI上清除localStorage信息，否则这些信息将永远存在。存放数据大小为一般为5MB,而且它仅在客户端（即浏览器）中保存，不参与和服务器的通信。</p>
+        <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><ul>
+<li>Promise主要用于异步处理，用来解决传统的回调地狱问题。</li>
+<li><p>在实际项目中可以用来处理异步函数，以及多个异步操作的处理，在<br>异步处理中定义异步方法(如ajax),在.then方法中处理结果，使得逻辑更清晰，更易于维护，而不是使用函数嵌套函数的方式。</p>
+</li>
+<li><p>所谓Promise，简单说就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果。</p>
+</li>
+<li>Promise是一个对象，从它可以获取异步操作的消息。 </li>
+<li><p>Promise 对象的状态不受外界影响。只有异步操作的结果，可以决定当前是哪一种状态</p>
+<h2 id="Promise三种状态"><a href="#Promise三种状态" class="headerlink" title="Promise三种状态"></a>Promise三种状态</h2></li>
+</ul>
+<ul>
+<li>pending：进行中</li>
+<li>fulfilled :已经成功</li>
+<li><p>rejected 已经失败</p>
+<h2 id="Promise状态改变："><a href="#Promise状态改变：" class="headerlink" title="Promise状态改变："></a>Promise状态改变：</h2></li>
+<li><p>从pending变为fulfilled</p>
+</li>
+<li>从pending变为rejected。</li>
+</ul>
+<blockquote>
+<p>这两种情况只要发生，状态就凝固了，不会再变了这时就称为<code>resolved</code>（已定型）；</p>
 </blockquote>
-<pre><code>JSON.stringify()   =&gt;对象转JSON
-JSON.parse（)      =&gt;JSON转对象
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">localStorage.getItem(&apos;key&apos;) -&gt; val</span><br><span class="line">localStorage.setItem(&apos;key&apos;,&apos;val&apos;)</span><br><span class="line">localStorage.removeItem(&apos;key&apos;)</span><br><span class="line">localStorage.clear()</span><br></pre></td></tr></table></figure>
-<p>注意:<br>     在存储数据的时候，val值默认会使用toString转一道</p>
-<pre><code>{} -&gt; [object Object]
-</code></pre><p>解决:<br>   传递进去的时候用JSON.stringify转下。</p>
-<p> 支持一种事件</p>
-<pre><code>onstorage===&gt;能监控到同一个浏览器兄弟页面的操作
-</code></pre><h2 id="sessionStorage（临时存储）"><a href="#sessionStorage（临时存储）" class="headerlink" title="sessionStorage（临时存储）"></a>sessionStorage（临时存储）</h2><blockquote>
-<p>sessionStorage仅在当前会话下有效，关闭页面或浏览器后被清除。存放数据大小为一般为5MB,而且它仅在客户端（即浏览器）中保存，不参与和服务器的通信。源生接口可以接受，亦可再次封装来对Object和Array有更好的支持。</p>
+<h2 id="Promise的优点"><a href="#Promise的优点" class="headerlink" title="Promise的优点"></a>Promise的优点</h2><blockquote>
+<p>有了Promise对象，就可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。此外，Promise对象提供统一的接口，使得控制异步操作更加容易。</p>
 </blockquote>
-<p>不支持 onstorage 事件</p>
-<h2 id="cookie"><a href="#cookie" class="headerlink" title="cookie:"></a>cookie:</h2><blockquote>
-<p>前端使用一般是把它当做一个仓库 存一些用户的相关信息（加密）<br>每个浏览器的cookie体积大小是不一样的。</p>
+<h2 id="Promise的缺点"><a href="#Promise的缺点" class="headerlink" title="Promise的缺点"></a>Promise的缺点</h2><ul>
+<li>无法取消Promise，一旦新建它就会立即执行，无法中途取消。</li>
+<li>如果不设置回调函数，Promise内部抛出的错误，不会反应到外部。</li>
+<li>当处于Pending状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）。<h2 id="Promise的用法"><a href="#Promise的用法" class="headerlink" title="Promise的用法"></a>Promise的用法</h2></li>
+</ul>
+<blockquote>
+<p>Promise对象是一个构造函数，用来生成Promise实例。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">let p = new Promise(function(resolve,reject)&#123;</span><br><span class="line">        setTimeout(function()&#123;</span><br><span class="line">            a = 20;</span><br><span class="line">            if(a === 20)&#123;</span><br><span class="line">                resolve(a);</span><br><span class="line">            &#125;else&#123;</span><br><span class="line">                reject(&apos;错误&apos;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,0);</span><br><span class="line">    &#125;);</span><br><span class="line"> Promise 实例生成以后，可以用then 方法分别指定resolved状态和rejected状态的回调函数</span><br><span class="line">    p.then(function(a)&#123;</span><br><span class="line">        alert(a);</span><br><span class="line">    &#125;,function()&#123;</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<h2 id="cookie是一些数据-存储于你电脑上的文本文件中"><a href="#cookie是一些数据-存储于你电脑上的文本文件中" class="headerlink" title="cookie是一些数据, 存储于你电脑上的文本文件中"></a>cookie是一些数据, 存储于你电脑上的文本文件中</h2><pre><code>document.cookie 属性来创建 、读取、及删除 cookie。
-</code></pre><p>expires   ==&gt;指定了coolie的生存期</p>
+<p> Promise 有两个参数</p>
+<ol>
+<li><p><code>resolve</code>将Promise对象的状态从“未完成”变为“成功”（即从Pending变为Resolved），在异步操作成功时调用，并将异步操作的结果，作为参数传递出去。</p>
+</li>
+<li><p><code>reject</code>将Promise对象的状态从“未完成”变为“失败”（即从Pending变为Rejected），在异步操作失败时调用，并将异步操作报出的错误，作为参数传递出去。</p>
+</li>
+</ol>
 
       
     </div>
@@ -397,8 +416,8 @@ JSON.parse（)      =&gt;JSON转对象
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/29/封装数组的方法/" rel="next" title="数组封装方法">
-                <i class="fa fa-chevron-left"></i> 数组封装方法
+              <a href="/2018/06/02/js自定义事件/" rel="next" title="js自定义事件">
+                <i class="fa fa-chevron-left"></i> js自定义事件
               </a>
             
           </div>
@@ -406,10 +425,6 @@ JSON.parse（)      =&gt;JSON转对象
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/31/面向对象(一)/" rel="prev" title="面向对象(一)">
-                面向对象(一) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -543,7 +558,7 @@ JSON.parse（)      =&gt;JSON转对象
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#本地存储"><span class="nav-number">1.</span> <span class="nav-text">本地存储</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#localStorage-（长期存储）"><span class="nav-number">1.1.</span> <span class="nav-text">localStorage  （长期存储）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sessionStorage（临时存储）"><span class="nav-number">1.2.</span> <span class="nav-text">sessionStorage（临时存储）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cookie"><span class="nav-number">1.3.</span> <span class="nav-text">cookie:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cookie是一些数据-存储于你电脑上的文本文件中"><span class="nav-number">1.4.</span> <span class="nav-text">cookie是一些数据, 存储于你电脑上的文本文件中</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Promise三种状态"><span class="nav-number">2.</span> <span class="nav-text">Promise三种状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Promise状态改变："><span class="nav-number">3.</span> <span class="nav-text">Promise状态改变：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Promise的优点"><span class="nav-number">4.</span> <span class="nav-text">Promise的优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Promise的缺点"><span class="nav-number">5.</span> <span class="nav-text">Promise的缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Promise的用法"><span class="nav-number">6.</span> <span class="nav-text">Promise的用法</span></a></li></ol></div>
             
 
           </div>
