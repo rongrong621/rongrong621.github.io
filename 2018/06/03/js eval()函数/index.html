@@ -80,17 +80,17 @@
 
 
 
-<meta name="description" content="Object.prototype.toString在 JavaScript 里使用 typeof 来判断数据类型，只能区分基本类型，即 “number”，”string”，”undefined”，”boolean”，”object” 五种。  对于数组、函数、对象来说，其关系错综复杂，使用 typeof 都会统一返回 “object” 字符串。 要想区别对象、数组、函数单纯使用 typeof 是不">
+<meta name="description" content="定义eval() 函数可计算某个字符串，并执行其中的的 JavaScript 代码 用法eval(string)   string必需。要计算的字符串,其中含有要计算的 JavaScript 表达式或要执行的语句。 eval()只有一个参数。 eval的错误方法 如果传入的参数不是字符串，它直接返回这个函数。 如果参数是字符串，它会把字符串当成JavaScript代码进行编译，如果编译失败者抛出一">
 <meta property="og:type" content="article">
-<meta property="og:title" content="面向对象(二)">
-<meta property="og:url" content="http://yoursite.com/2018/05/31/面向对象(二)/index.html">
+<meta property="og:title" content="js eval()函数">
+<meta property="og:url" content="http://yoursite.com/2018/06/03/js eval()函数/index.html">
 <meta property="og:site_name" content="Little luck">
-<meta property="og:description" content="Object.prototype.toString在 JavaScript 里使用 typeof 来判断数据类型，只能区分基本类型，即 “number”，”string”，”undefined”，”boolean”，”object” 五种。  对于数组、函数、对象来说，其关系错综复杂，使用 typeof 都会统一返回 “object” 字符串。 要想区别对象、数组、函数单纯使用 typeof 是不">
+<meta property="og:description" content="定义eval() 函数可计算某个字符串，并执行其中的的 JavaScript 代码 用法eval(string)   string必需。要计算的字符串,其中含有要计算的 JavaScript 表达式或要执行的语句。 eval()只有一个参数。 eval的错误方法 如果传入的参数不是字符串，它直接返回这个函数。 如果参数是字符串，它会把字符串当成JavaScript代码进行编译，如果编译失败者抛出一">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-31T06:40:34.503Z">
+<meta property="og:updated_time" content="2018-06-03T12:54:58.636Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="面向对象(二)">
-<meta name="twitter:description" content="Object.prototype.toString在 JavaScript 里使用 typeof 来判断数据类型，只能区分基本类型，即 “number”，”string”，”undefined”，”boolean”，”object” 五种。  对于数组、函数、对象来说，其关系错综复杂，使用 typeof 都会统一返回 “object” 字符串。 要想区别对象、数组、函数单纯使用 typeof 是不">
+<meta name="twitter:title" content="js eval()函数">
+<meta name="twitter:description" content="定义eval() 函数可计算某个字符串，并执行其中的的 JavaScript 代码 用法eval(string)   string必需。要计算的字符串,其中含有要计算的 JavaScript 表达式或要执行的语句。 eval()只有一个参数。 eval的错误方法 如果传入的参数不是字符串，它直接返回这个函数。 如果参数是字符串，它会把字符串当成JavaScript代码进行编译，如果编译失败者抛出一">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/31/面向对象(二)/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/03/js eval()函数/"/>
 
 
 
 
 
-  <title>面向对象(二) | Little luck</title>
+  <title>js eval()函数 | Little luck</title>
   
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/31/面向对象(二)/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/03/js eval()函数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="氧气柠檬🍭">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">面向对象(二)</h1>
+          <h1 class="post-title" itemprop="name headline">js eval()函数</h1>
         
 
         <div class="post-meta">
@@ -272,8 +272,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-31T14:08:27+08:00">
-                2018-05-31
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-03T20:54:04+08:00">
+                2018-06-03
               </time>
             
 
@@ -315,38 +315,17 @@
       
 
       
-        <h2 id="Object-prototype-toString"><a href="#Object-prototype-toString" class="headerlink" title="Object.prototype.toString"></a>Object.prototype.toString</h2><p>在 JavaScript 里使用 typeof 来判断数据类型，只能区分基本类型，即 “number”，”string”，”undefined”，”boolean”，”object” 五种。</p>
-<p> 对于数组、函数、对象来说，其关系错综复杂，使用 typeof 都会统一返回 “object” 字符串。</p>
-<p>要想区别对象、数组、函数单纯使用 typeof 是不行的，JavaScript中,通过Object.prototype.toString方法，判断某个对象值属于哪种内置类型。</p>
-<p>由于 JavaScript 中一切都是对象，任何都不例外，对所有值类型应用 Object.prototype.toString.call() 方法结果如下：</p>
-<p>Object.prototype.toString.call()方法浅谈<br>使用Object.prototype上的原生toString()方法判断数据类型，使用方法如下：</p>
-<p>Object.prototype.toString.call(value)<br>1.判断基本类型：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Object.prototype.toString.call(null);//”[object Null]”</span><br><span class="line">Object.prototype.toString.call(undefined);//”[object Undefined]”</span><br><span class="line">Object.prototype.toString.call(“abc”);//”[object String]”</span><br><span class="line">Object.prototype.toString.call(123);//”[object Number]”</span><br><span class="line">Object.prototype.toString.call(true);//”[object Boolean]”</span><br></pre></td></tr></table></figure></p>
-<p>2.判断原生引用类型：<br>    函数类型<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Function fn()&#123;console.log(“test”);&#125;</span><br><span class="line">Object.prototype.toString.call(fn);//”[object Function]”</span><br></pre></td></tr></table></figure></p>
-<p>  日期类型</p>
-<pre><code>Function fn(){console.log(“test”);}
-Object.prototype.toString.call(fn);//”[object Function]”
-</code></pre><p>   数组类型</p>
-<pre><code>var arr = [1,2,3];
-Object.prototype.toString.call(arr);//”[object Array]”
-</code></pre><p>正则表达式</p>
-<pre><code>var reg = /[hbc]at/gi;
-Object.prototype.toString.call(arr);//”[object Array]”
-</code></pre><p>自定义类型</p>
-<pre><code>function Person(name, age) {
-    this.name = name;
-    this.age = age;
-}
-var person = new Person(&quot;Rose&quot;, 18);
-Object.prototype.toString.call(arr); //”[object Object]”
-很明显这种方法不能准确判断person是Person类的实例，而只能用instanceof 操作符来进行判断，如下所示：
-console.log(person instanceof Person);//输出结果为true
-</code></pre><p> 3.判断原生JSON对象：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var isNativeJSON = window.JSON &amp;&amp; Object.prototype.toString.call(JSON);</span><br><span class="line">console.log(isNativeJSON);//输出结果为”[object JSON]”说明JSON是原生的，否则不是；</span><br></pre></td></tr></table></figure></p>
-<h2 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h2><blockquote>
-<p>我们知道，默认情况下，对一个函数前面使用new，可以构造出一个对象。每一个对象都有一个constructor属性，这个constructor属性指向构造出该对象的函数。</p>
-</blockquote>
-<blockquote>
-<p>这个属性是理解JavaScript类和继承的重要基础<br>实例化对象.constructor = 实例化对象的构造函数<br>注意：不是100%准确，容易被修改。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 等价于 var foo = new Array(1, 56, 34, 12); </span><br><span class="line">var arr = [1, 56, 34, 12]; </span><br><span class="line">console.log(arr.constructor === Array); // true </span><br><span class="line">// 等价于 var foo = new Function(); </span><br><span class="line">var Foo = function() &#123; &#125;; </span><br><span class="line">console.log(Foo.constructor === Function); // true </span><br><span class="line">// 由构造函数实例化一个obj对象 </span><br><span class="line">var obj = new Foo(); </span><br><span class="line">console.log(obj.constructor === Foo); // true </span><br><span class="line">// 将上面两段代码合起来，就得到下面的结论 </span><br><span class="line">console.log(obj.constructor.constructor === Function); // true</span><br></pre></td></tr></table></figure></p>
-</blockquote>
+        <h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>eval() 函数可计算某个字符串，并执行其中的的 JavaScript 代码</p>
+<h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><pre><code>eval(string)
+</code></pre><p>  <code>string</code>必需。要计算的字符串,其中含有要计算的 JavaScript 表达式或要执行的语句。</p>
+<p>eval()只有一个参数。</p>
+<h2 id="eval的错误方法"><a href="#eval的错误方法" class="headerlink" title="eval的错误方法"></a>eval的错误方法</h2><ul>
+<li>如果传入的参数不是字符串，它直接返回这个函数。</li>
+<li>如果参数是字符串，它会把字符串当成JavaScript代码进行编译，如果编译失败者抛出一个语法错误异常。</li>
+<li>如果编译成功，则开始执行这一段代码，并返回字符串中的最后一个表达式或语句的值，</li>
+<li>如果最后一个表达式或语句没有值，则最终返回undefined。</li>
+</ul>
+<p>简单的代码实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let s3 = &quot;&#123;&apos;name&apos;:&apos;hehe&apos;&#125;&quot;;</span><br><span class="line">console.log(eval(&apos;(&apos;+s3+&apos;)&apos;));//返回  &#123;name: &quot;hehe&quot;&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -408,8 +387,8 @@ console.log(person instanceof Person);//输出结果为true
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/31/面向对象(一)/" rel="next" title="面向对象(一)">
-                <i class="fa fa-chevron-left"></i> 面向对象(一)
+              <a href="/2018/06/03/Promise/" rel="next" title="Promise">
+                <i class="fa fa-chevron-left"></i> Promise
               </a>
             
           </div>
@@ -417,10 +396,6 @@ console.log(person instanceof Person);//输出结果为true
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/01/webpack4.x开发环境配置/" rel="prev" title="webpack4.x开发环境配置">
-                webpack4.x开发环境配置 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -554,7 +529,7 @@ console.log(person instanceof Person);//输出结果为true
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-prototype-toString"><span class="nav-number">1.</span> <span class="nav-text">Object.prototype.toString</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#constructor-NaN"><span class="nav-number">2.</span> <span class="nav-text">constructor</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用法"><span class="nav-number">2.</span> <span class="nav-text">用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#eval的错误方法"><span class="nav-number">3.</span> <span class="nav-text">eval的错误方法</span></a></li></ol></div>
             
 
           </div>
