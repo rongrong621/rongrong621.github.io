@@ -80,17 +80,17 @@
 
 
 
-<meta name="description" content="定义与触发在JavaScript前端开发中，我们经常调用click、mouseup等基本事件。有的时候，为了满足特定功能的要求，我们需要自定义事件，这就要说到自定义事件的运作机制。对于标准浏览器，其提供了可供元素触发的方法：element.dispatchEvent(). 使用该方法之前需要进行创建和初始化。因此，总结说来就是： document.createEvent() event.initE">
+<meta name="description" content="源: 域名:www.baidu.com,等同于http:// 119.75.217.109  为ip的别名 端口:类似于不同店铺 协议:http/https,ftp,file..  同源策略(Same origin policy）: 同源策略是浏览器的一个安全功能，不同源的客户端脚本在没有明确授权的情况下，不能读写对方资源。可以说Web是构建在同源策略基础之上的， 浏览器只是针对同源策略的一种实现">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js自定义事件">
-<meta property="og:url" content="http://yoursite.com/2018/06/02/js自定义事件/index.html">
+<meta property="og:title" content="跨域（跨源）(一)">
+<meta property="og:url" content="http://yoursite.com/2018/06/04/跨域（跨源）/index.html">
 <meta property="og:site_name" content="Little luck">
-<meta property="og:description" content="定义与触发在JavaScript前端开发中，我们经常调用click、mouseup等基本事件。有的时候，为了满足特定功能的要求，我们需要自定义事件，这就要说到自定义事件的运作机制。对于标准浏览器，其提供了可供元素触发的方法：element.dispatchEvent(). 使用该方法之前需要进行创建和初始化。因此，总结说来就是： document.createEvent() event.initE">
+<meta property="og:description" content="源: 域名:www.baidu.com,等同于http:// 119.75.217.109  为ip的别名 端口:类似于不同店铺 协议:http/https,ftp,file..  同源策略(Same origin policy）: 同源策略是浏览器的一个安全功能，不同源的客户端脚本在没有明确授权的情况下，不能读写对方资源。可以说Web是构建在同源策略基础之上的， 浏览器只是针对同源策略的一种实现">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-02T14:19:09.015Z">
+<meta property="og:updated_time" content="2018-06-04T01:44:04.010Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js自定义事件">
-<meta name="twitter:description" content="定义与触发在JavaScript前端开发中，我们经常调用click、mouseup等基本事件。有的时候，为了满足特定功能的要求，我们需要自定义事件，这就要说到自定义事件的运作机制。对于标准浏览器，其提供了可供元素触发的方法：element.dispatchEvent(). 使用该方法之前需要进行创建和初始化。因此，总结说来就是： document.createEvent() event.initE">
+<meta name="twitter:title" content="跨域（跨源）(一)">
+<meta name="twitter:description" content="源: 域名:www.baidu.com,等同于http:// 119.75.217.109  为ip的别名 端口:类似于不同店铺 协议:http/https,ftp,file..  同源策略(Same origin policy）: 同源策略是浏览器的一个安全功能，不同源的客户端脚本在没有明确授权的情况下，不能读写对方资源。可以说Web是构建在同源策略基础之上的， 浏览器只是针对同源策略的一种实现">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/02/js自定义事件/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/04/跨域（跨源）/"/>
 
 
 
 
 
-  <title>js自定义事件 | Little luck</title>
+  <title>跨域（跨源）(一) | Little luck</title>
   
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/02/js自定义事件/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/04/跨域（跨源）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="氧气柠檬🍭">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">js自定义事件</h1>
+          <h1 class="post-title" itemprop="name headline">跨域（跨源）(一)</h1>
         
 
         <div class="post-meta">
@@ -272,8 +272,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-02T22:18:03+08:00">
-                2018-06-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-04T09:31:27+08:00">
+                2018-06-04
               </time>
             
 
@@ -315,40 +315,34 @@
       
 
       
-        <h2 id="定义与触发"><a href="#定义与触发" class="headerlink" title="定义与触发"></a>定义与触发</h2><p>在JavaScript前端开发中，我们经常调用click、mouseup等基本事件。有的时候，为了满足特定功能的要求，我们需要自定义事件，这就要说到自定义事件的运作机制。<br>对于标准浏览器，其提供了可供元素触发的方法：element.dispatchEvent(). 使用该方法之前需要进行创建和初始化。因此，总结说来就是：</p>
-<pre><code>document.createEvent()
-event.initEvent()
-element.dispatchEvent()
-</code></pre><p>具体详解<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 创建</span><br><span class="line">var evt = document.createEvent(&quot;HTMLEvents&quot;);</span><br><span class="line">// 初始化，事件类型，是否冒泡，是否阻止浏览器的默认行为</span><br><span class="line">evt.initEvent(&quot;alert&quot;, false, false);</span><br><span class="line"></span><br><span class="line">// 触发</span><br><span class="line">dom.dispatchEvent(evt);</span><br></pre></td></tr></table></figure></p>
-<p>createEvent()方法返回新创建的Event对象，支持一个参数，表示事件类型，具体见下表：</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th style="text-align:center">事件接口</th>
-<th style="text-align:right">初始化方法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>HTMLEvents</td>
-<td style="text-align:center">HTMLEvent</td>
-<td style="text-align:right">initEvent()</td>
-</tr>
-<tr>
-<td>MouseEvents</td>
-<td style="text-align:center">MouseEvent</td>
-<td style="text-align:right">initMouseEvent()</td>
-</tr>
-<tr>
-<td>UIEvents</td>
-<td style="text-align:center">UIEvent</td>
-<td style="text-align:right">initUIEvent()</td>
-</tr>
-</tbody>
-</table>
-<p><code>initEvent()</code>方法用于初始化通过<code>DocumentEvent</code>接口创建的<code>Event</code>的值。支持三个参数：<code>initEvent(eventName, canBubble, preventDefault).</code> 分别表示事件名称，是否可以冒泡，是否阻止事件的默认操作。</p>
-<p><code>dispatchEvent()</code>就是触发执行了，<code>dom.dispatchEvent(eventObject),</code> 参数<code>eventObject</code>表示事件对象，是<code>createEvent()</code>方法返回的创建的<code>Event</code>对象。</p>
+        <h2 id="源"><a href="#源" class="headerlink" title="源:"></a>源:</h2><ul>
+<li>域名:<a href="http://www.baidu.com,等同于http://" target="_blank" rel="noopener">www.baidu.com,等同于http://</a> 119.75.217.109  为ip的别名</li>
+<li>端口:类似于不同店铺</li>
+<li>协议:http/https,ftp,file..</li>
+</ul>
+<h2 id="同源策略-Same-origin-policy）"><a href="#同源策略-Same-origin-policy）" class="headerlink" title="同源策略(Same origin policy）:"></a>同源策略(Same origin policy）:</h2><blockquote>
+<p>同源策略是浏览器的一个安全功能，不同源的客户端脚本在没有明确授权的情况下，不能读写对方资源。<br>可以说Web是构建在同源策略基础之上的，<br> 浏览器只是针对同源策略的一种实现。</p>
+<p>是为了保证用户信息的安全，防止恶意的网站窃取数据</p>
+</blockquote>
+<h2 id="同源"><a href="#同源" class="headerlink" title="同源"></a>同源</h2><p> 同域名、同端口、同协议</p>
+<h2 id="跨源"><a href="#跨源" class="headerlink" title="跨源:"></a>跨源:</h2><p>不同域名、不同端口、不同协议</p>
+<h2 id="解决跨域方案"><a href="#解决跨域方案" class="headerlink" title="解决跨域方案:"></a>解决跨域方案:</h2><p>这里说的js跨域是指通过js在不同的域之间进行数据传输或通信，比如用ajax向一个不同的域请求数据，或者通过js获取页面中不同域的框架中(iframe)的数据。只要协议、域名、端口有任何一个不同，都被当作是不同的域。</p>
+<p> 方法1： 服务器代理</p>
+<p>原理:<br>    a能访问b,b能访问c，就等同于a能访问c<br>    a:前端请求<br>    b:同源下的后端文件<br>    c:第三方数据<br>        比如:<a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a><br>                            <a href="http://www.kaola.com/getSuggestKeyword.html?query=猫&amp;size=10" target="_blank" rel="noopener">http://www.kaola.com/getSuggestKeyword.html?query=猫&amp;size=10</a></p>
+<p>缺点：<br>    第三如果改了，那么你自动也会改</p>
+<p>方法2：   JSONP </p>
+<blockquote>
+<p>JSONP是JSON with Padding的略称，是一个非官方的协议。<br>JSONP实现跨域请求的原理简单的说，就是动态创建<code>&lt;script&gt;</code>标签，然后利用<code>&lt;script&gt;</code>的<code>src</code> 不受同源策略约束来跨域获取数据。</p>
+</blockquote>
+<p>动态创建 <code>&lt;script&gt;</code> 标签，设置其<code>src</code>，回调函数在<code>src</code>中设置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">window.onload = function()&#123;</span><br><span class="line">    document.onclick = function()&#123;</span><br><span class="line">        let oS = document.createElement(&apos;script&apos;);</span><br><span class="line">        oS.src = &apos;https://api.douban.com/v2/book/search?q=javascript&amp;count=1&amp;callback=handleResponse&apos;;</span><br><span class="line">        h.appendChild(oS);</span><br><span class="line">        //fn([1,2,3]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>jsonp  原理总结：</p>
+<ul>
+<li>后端传给前端的数据为函数名 + 括号的 把数据放入括号中</li>
+<li>前端需要在全局放一个函数去接收</li>
+<li>当需要数据的时候，动态创建script标签，通过url的方式去访问后端<pre><code>script标签又能解析js，所以等同于函数调用
+</code></pre>jsonp的优点：<pre><code>兼容非常好
+</code></pre></li>
+</ul>
 
       
     </div>
@@ -410,8 +404,8 @@ element.dispatchEvent()
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/01/webpack4.x开发环境配置/" rel="next" title="webpack4.x开发环境配置">
-                <i class="fa fa-chevron-left"></i> webpack4.x开发环境配置
+              <a href="/2018/06/03/js eval()函数/" rel="next" title="js eval()函数">
+                <i class="fa fa-chevron-left"></i> js eval()函数
               </a>
             
           </div>
@@ -419,10 +413,6 @@ element.dispatchEvent()
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/03/Promise/" rel="prev" title="Promise">
-                Promise <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -556,7 +546,7 @@ element.dispatchEvent()
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义与触发"><span class="nav-number">1.</span> <span class="nav-text">定义与触发</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#源"><span class="nav-number">1.</span> <span class="nav-text">源:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#同源策略-Same-origin-policy）"><span class="nav-number">2.</span> <span class="nav-text">同源策略(Same origin policy）:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#同源"><span class="nav-number">3.</span> <span class="nav-text">同源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跨源"><span class="nav-number">4.</span> <span class="nav-text">跨源:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决跨域方案"><span class="nav-number">5.</span> <span class="nav-text">解决跨域方案:</span></a></li></ol></div>
             
 
           </div>
