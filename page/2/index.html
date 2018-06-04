@@ -80,17 +80,16 @@
 
 
 
-<meta name="description" content="一、全局安装webpack直接使用npm全局安装webpack，我们预期全局安装webpack后，便能在命令行中使用webpack指令。我们在命令行输入： npm install -g webpack  当执行该操作后，便在C:\Users\你的用户名\AppData\Roaming\npm\node_modules创建了webpack文件夹，里面存储了刚刚全局安装的webpack模块。 二. 创">
-<meta property="og:type" content="article">
-<meta property="og:title" content="webpack4.x开发环境配置">
-<meta property="og:url" content="http://yoursite.com/2018/06/01/webpack4.x开发环境配置/index.html">
+<meta name="description" content="各种宅，各种懒，爱好游戏的码农">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Little luck">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="Little luck">
-<meta property="og:description" content="一、全局安装webpack直接使用npm全局安装webpack，我们预期全局安装webpack后，便能在命令行中使用webpack指令。我们在命令行输入： npm install -g webpack  当执行该操作后，便在C:\Users\你的用户名\AppData\Roaming\npm\node_modules创建了webpack文件夹，里面存储了刚刚全局安装的webpack模块。 二. 创">
+<meta property="og:description" content="各种宅，各种懒，爱好游戏的码农">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-01T14:45:36.027Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="webpack4.x开发环境配置">
-<meta name="twitter:description" content="一、全局安装webpack直接使用npm全局安装webpack，我们预期全局安装webpack后，便能在命令行中使用webpack指令。我们在命令行输入： npm install -g webpack  当执行该操作后，便在C:\Users\你的用户名\AppData\Roaming\npm\node_modules创建了webpack文件夹，里面存储了刚刚全局安装的webpack模块。 二. 创">
+<meta name="twitter:title" content="Little luck">
+<meta name="twitter:description" content="各种宅，各种懒，爱好游戏的码农">
 
 
 
@@ -120,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/01/webpack4.x开发环境配置/"/>
+  <link rel="canonical" href="http://yoursite.com/page/2/"/>
 
 
 
 
 
-  <title>webpack4.x开发环境配置 | Little luck</title>
+  <title>Little luck</title>
   
 
 
@@ -145,7 +144,8 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -228,9 +228,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/01/webpack4.x开发环境配置/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/18/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="氧气柠檬🍭">
@@ -260,7 +260,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">webpack4.x开发环境配置</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/18/hello-world/" itemprop="url">Hello World</a></h1>
         
 
         <div class="post-meta">
@@ -272,8 +274,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-01T22:39:45+08:00">
-                2018-06-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-18T15:23:11+08:00">
+                2018-05-18
               </time>
             
 
@@ -291,11 +293,6 @@
           
           
 
-          
-            <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
-            </span>
           
 
           
@@ -315,18 +312,18 @@
       
 
       
-        <h2 id="一、全局安装webpack"><a href="#一、全局安装webpack" class="headerlink" title="一、全局安装webpack"></a>一、全局安装webpack</h2><p>直接使用npm全局安装webpack，我们预期全局安装webpack后，便能在命令行中使用webpack指令。我们在命令行输入：</p>
-<pre><code>npm install -g webpack
-</code></pre><p> 当执行该操作后，便在C:\Users\你的用户名\AppData\Roaming\npm\node_modules创建了webpack文件夹，里面存储了刚刚全局安装的webpack模块。</p>
-<h2 id="二-创建项目"><a href="#二-创建项目" class="headerlink" title="二. 创建项目"></a>二. 创建项目</h2><p>我们在合适位置新建一个文件夹，用于存放我们的项目。<br>命令行中定位到新建文件夹下，输入以下命令进行项目的初始化：</p>
-<pre><code>npm init
-</code></pre><p>这里，要求设置很多选项，可以按项目情况配置也可以不填直接回车。完成后，我们发现文件夹中增加了package.json文件，它用于保存关于项目的信息。</p>
-<h2 id="三-安装webpack-cli"><a href="#三-安装webpack-cli" class="headerlink" title="三.安装webpack-cli"></a>三.安装webpack-cli</h2><p>我们在项目中本地安装webpack-cli：</p>
-<pre><code>npm install webpack-cli -D
-</code></pre><p>这里-D参数和–save-dev的作用相同，只是一种简写而已。这里安装完成后，显示webpack-cli版本</p>
-<h2 id="四-在项目目录下要本地安装webpack"><a href="#四-在项目目录下要本地安装webpack" class="headerlink" title="四.在项目目录下要本地安装webpack"></a>四.在项目目录下要本地安装webpack</h2><pre><code>npm install webpack -D 
-</code></pre><h2 id="五-手动新建文件夹作为配置文件"><a href="#五-手动新建文件夹作为配置文件" class="headerlink" title="五.手动新建文件夹作为配置文件"></a>五.手动新建文件夹作为配置文件</h2><pre><code>名字为：webpack.config.js
-</code></pre>
+        
+          
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/18/hello-world/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
     
@@ -336,76 +333,21 @@
     
 
     
-      <div>
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>请我吃辣条吧~~</div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>Donate</span>
-  </button>
-  <div id="QR" style="display: none;">
-
-    
-      <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="http://ccstatic-1252317822.file.myqcloud.com/portraitimg/2018-03-25/5ab6e5eee49cf.jpg" alt="氧气柠檬🍭 WeChat Pay"/>
-        <p>WeChat Pay</p>
-      </div>
-    
-
-    
-      <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="http://ccstatic-1252317822.file.myqcloud.com/portraitimg/2018-03-25/5ab6e5eee49cf.jpg" alt="氧气柠檬🍭 Alipay"/>
-        <p>Alipay</p>
-      </div>
-    
-
-    
-
-  </div>
-</div>
-
-      </div>
-    
 
     
     <div>
-      
-        <div>
-    
-        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
-    
-</div>
       
   </div>
     <footer class="post-footer">
       
 
       
-      
+
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/05/31/面向对象(二)/" rel="next" title="面向对象(二)">
-                <i class="fa fa-chevron-left"></i> 面向对象(二)
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/02/js自定义事件/" rel="prev" title="js自定义事件">
-                js自定义事件 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -415,11 +357,14 @@
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -427,10 +372,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -451,17 +392,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -523,22 +455,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、全局安装webpack"><span class="nav-number">1.</span> <span class="nav-text">一、全局安装webpack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-创建项目"><span class="nav-number">2.</span> <span class="nav-text">二. 创建项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-安装webpack-cli"><span class="nav-number">3.</span> <span class="nav-text">三.安装webpack-cli</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四-在项目目录下要本地安装webpack"><span class="nav-number">4.</span> <span class="nav-text">四.在项目目录下要本地安装webpack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五-手动新建文件夹作为配置文件"><span class="nav-number">5.</span> <span class="nav-text">五.手动新建文件夹作为配置文件</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -706,10 +622,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
