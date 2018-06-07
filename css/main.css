@@ -1943,7 +1943,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #71fbff;
+  background: #9dff61;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3111,16 +3111,8 @@ pre .javascript .function {
     text-align: justify;
   }
 }
-@media screen and (min-width: 1200px) {
-  body {
-    background-image: url("/images/beij.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 50% 50%;
-  }
-  #footer a {
-    color: #eee;
-  }
+body {
+  background: url("../images/tu.jpg");
 }
 code {
   color: #ff7600;
