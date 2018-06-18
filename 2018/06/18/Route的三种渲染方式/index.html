@@ -80,17 +80,17 @@
 
 
 
-<meta name="description" content="定义与触发在JavaScript前端开发中，我们经常调用click、mouseup等基本事件。有的时候，为了满足特定功能的要求，我们需要自定义事件，这就要说到自定义事件的运作机制。对于标准浏览器，其提供了可供元素触发的方法：element.dispatchEvent(). 使用该方法之前需要进行创建和初始化。因此，总结说来就是： document.createEvent() event.initE">
+<meta name="description" content="1.component这是最常用也最容易理解的方式，给什么就渲染什么 2.renderrender的类型是function，Route会渲染这个function的返回值。因此它的作用就是附加一些额外的逻辑1234&amp;lt;Route path=&amp;quot;/home&amp;quot; render=&amp;#123;() =&amp;gt; &amp;#123;    console.log(&amp;apos;额外的逻辑&amp;apos;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js自定义事件">
-<meta property="og:url" content="http://yoursite.com/2018/06/02/js自定义事件/index.html">
+<meta property="og:title" content="Route的三种渲染方式">
+<meta property="og:url" content="http://yoursite.com/2018/06/18/Route的三种渲染方式/index.html">
 <meta property="og:site_name" content="Little luck">
-<meta property="og:description" content="定义与触发在JavaScript前端开发中，我们经常调用click、mouseup等基本事件。有的时候，为了满足特定功能的要求，我们需要自定义事件，这就要说到自定义事件的运作机制。对于标准浏览器，其提供了可供元素触发的方法：element.dispatchEvent(). 使用该方法之前需要进行创建和初始化。因此，总结说来就是： document.createEvent() event.initE">
+<meta property="og:description" content="1.component这是最常用也最容易理解的方式，给什么就渲染什么 2.renderrender的类型是function，Route会渲染这个function的返回值。因此它的作用就是附加一些额外的逻辑1234&amp;lt;Route path=&amp;quot;/home&amp;quot; render=&amp;#123;() =&amp;gt; &amp;#123;    console.log(&amp;apos;额外的逻辑&amp;apos;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-02T14:19:09.015Z">
+<meta property="og:updated_time" content="2018-06-18T14:08:43.044Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js自定义事件">
-<meta name="twitter:description" content="定义与触发在JavaScript前端开发中，我们经常调用click、mouseup等基本事件。有的时候，为了满足特定功能的要求，我们需要自定义事件，这就要说到自定义事件的运作机制。对于标准浏览器，其提供了可供元素触发的方法：element.dispatchEvent(). 使用该方法之前需要进行创建和初始化。因此，总结说来就是： document.createEvent() event.initE">
+<meta name="twitter:title" content="Route的三种渲染方式">
+<meta name="twitter:description" content="1.component这是最常用也最容易理解的方式，给什么就渲染什么 2.renderrender的类型是function，Route会渲染这个function的返回值。因此它的作用就是附加一些额外的逻辑1234&amp;lt;Route path=&amp;quot;/home&amp;quot; render=&amp;#123;() =&amp;gt; &amp;#123;    console.log(&amp;apos;额外的逻辑&amp;apos;">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/02/js自定义事件/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/18/Route的三种渲染方式/"/>
 
 
 
 
 
-  <title>js自定义事件 | Little luck</title>
+  <title>Route的三种渲染方式 | Little luck</title>
   
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/02/js自定义事件/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/18/Route的三种渲染方式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="氧气柠檬🍭">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">js自定义事件</h1>
+          <h1 class="post-title" itemprop="name headline">Route的三种渲染方式</h1>
         
 
         <div class="post-meta">
@@ -272,8 +272,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-02T22:18:03+08:00">
-                2018-06-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-18T22:07:42+08:00">
+                2018-06-18
               </time>
             
 
@@ -315,41 +315,10 @@
       
 
       
-        <h2 id="定义与触发"><a href="#定义与触发" class="headerlink" title="定义与触发"></a>定义与触发</h2><p>在JavaScript前端开发中，我们经常调用click、mouseup等基本事件。有的时候，为了满足特定功能的要求，我们需要自定义事件，这就要说到自定义事件的运作机制。<br>对于标准浏览器，其提供了可供元素触发的方法：element.dispatchEvent(). 使用该方法之前需要进行创建和初始化。因此，总结说来就是：</p>
-<pre><code>document.createEvent()
-event.initEvent()
-element.dispatchEvent()
-</code></pre><p>具体详解<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 创建</span><br><span class="line">var evt = document.createEvent(&quot;HTMLEvents&quot;);</span><br><span class="line">// 初始化，事件类型，是否冒泡，是否阻止浏览器的默认行为</span><br><span class="line">evt.initEvent(&quot;alert&quot;, false, false);</span><br><span class="line"></span><br><span class="line">// 触发</span><br><span class="line">dom.dispatchEvent(evt);</span><br></pre></td></tr></table></figure></p>
-<p>createEvent()方法返回新创建的Event对象，支持一个参数，表示事件类型，具体见下表：</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th style="text-align:center">事件接口</th>
-<th style="text-align:right">初始化方法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>HTMLEvents</td>
-<td style="text-align:center">HTMLEvent</td>
-<td style="text-align:right">initEvent()</td>
-</tr>
-<tr>
-<td>MouseEvents</td>
-<td style="text-align:center">MouseEvent</td>
-<td style="text-align:right">initMouseEvent()</td>
-</tr>
-<tr>
-<td>UIEvents</td>
-<td style="text-align:center">UIEvent</td>
-<td style="text-align:right">initUIEvent()</td>
-</tr>
-</tbody>
-</table>
-<p><code>initEvent()</code>方法用于初始化通过<code>DocumentEvent</code>接口创建的<code>Event</code>的值。支持三个参数：<code>initEvent(eventName, canBubble, preventDefault).</code> 分别表示事件名称，是否可以冒泡，是否阻止事件的默认操作。</p>
-<p><code>dispatchEvent()</code>就是触发执行了，<code>dom.dispatchEvent(eventObject),</code> 参数<code>eventObject</code>表示事件对象，是<code>createEvent()</code>方法返回的创建的<code>Event</code>对象。</p>
-
+        <h2 id="1-component"><a href="#1-component" class="headerlink" title="1.component"></a>1.component</h2><p>这是最常用也最容易理解的方式，给什么就渲染什么</p>
+<h2 id="2-render"><a href="#2-render" class="headerlink" title="2.render"></a>2.render</h2><p>render的类型是function，Route会渲染这个function的返回值。因此它的作用就是附加一些额外的逻辑<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;Route path=&quot;/home&quot; render=&#123;() =&gt; &#123;</span><br><span class="line">    console.log(&apos;额外的逻辑&apos;);</span><br><span class="line">    return (&lt;div&gt;Home&lt;/div&gt;);</span><br><span class="line">    &#125;/&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="3-children"><a href="#3-children" class="headerlink" title="3.children"></a>3.children</h2><p>这是最特殊的渲染方式。一、它同render类似,是一个function。不同的地方在于它会被传入一个match参数来告诉你这个Route的path和location匹配上没有。二、第二个特殊的地方在于，即使path没有匹配上，我们也可以将它渲染出来。秘诀就在于前面一点提到的match参数。我们可以根据这个参数来决定在匹配的时候渲染什么，不匹配的时候又渲染什么。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 在匹配时，容器的calss是light，&lt;Home /&gt;会被渲染</span><br><span class="line">// 在不匹配时，容器的calss是dark，&lt;About /&gt;会被渲染</span><br><span class="line">&lt;Route path=&apos;/home&apos; children=&#123;(&#123; match &#125;) =&gt; (</span><br><span class="line">    &lt;div className=&#123;match ? &apos;light&apos; : &apos;dark&apos;&#125;&gt;</span><br><span class="line">    &#123;match ? &lt;Home/&gt;:&lt;About&gt;&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  )&#125;/&gt;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -410,8 +379,8 @@ element.dispatchEvent()
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/01/webpack4.x开发环境配置/" rel="next" title="webpack4.x开发环境配置">
-                <i class="fa fa-chevron-left"></i> webpack4.x开发环境配置
+              <a href="/2018/06/17/React router的对象属性方法（一）/" rel="next" title="React router的对象属性方法（一）">
+                <i class="fa fa-chevron-left"></i> React router的对象属性方法（一）
               </a>
             
           </div>
@@ -419,10 +388,6 @@ element.dispatchEvent()
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/03/Promise/" rel="prev" title="Promise">
-                Promise <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -556,7 +521,7 @@ element.dispatchEvent()
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义与触发"><span class="nav-number">1.</span> <span class="nav-text">定义与触发</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-component"><span class="nav-number">1.</span> <span class="nav-text">1.component</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-render"><span class="nav-number">2.</span> <span class="nav-text">2.render</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-children"><span class="nav-number">3.</span> <span class="nav-text">3.children</span></a></li></ol></div>
             
 
           </div>
