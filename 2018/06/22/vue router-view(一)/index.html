@@ -80,17 +80,17 @@
 
 
 
-<meta name="description" content="Redux核心概念 store reducers actions  actions Actions是中包含的是我们发送到store中的数据，或者触发store中的数据更新，而且在redux中actions是store中数据更新的唯一来源。我们使用store.dispatch()来发送actions。   reducers Redux中的action只是表明了在应用中发生了什么，但是并没有对数据st">
+<meta name="description" content="router-link标签 router-link标签，默认在页面会被渲染成a标签router-link可以渲染为任何元素，这里可以直接渲染成li标签，同样能实现跳转效果，节省了a标签的使用，还有一个原因可能是因为a标签正常是链接的跳转的作用，点击a时可能会重载页面，使用router-link，此标签会被vue所监听，跳转链接时就不会刷新页面了  “router-link”属性1.”:to” 属">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Redux">
-<meta property="og:url" content="http://yoursite.com/2018/06/14/Redux/index.html">
+<meta property="og:title" content="vue router-view(一)">
+<meta property="og:url" content="http://yoursite.com/2018/06/22/vue router-view(一)/index.html">
 <meta property="og:site_name" content="Little luck">
-<meta property="og:description" content="Redux核心概念 store reducers actions  actions Actions是中包含的是我们发送到store中的数据，或者触发store中的数据更新，而且在redux中actions是store中数据更新的唯一来源。我们使用store.dispatch()来发送actions。   reducers Redux中的action只是表明了在应用中发生了什么，但是并没有对数据st">
+<meta property="og:description" content="router-link标签 router-link标签，默认在页面会被渲染成a标签router-link可以渲染为任何元素，这里可以直接渲染成li标签，同样能实现跳转效果，节省了a标签的使用，还有一个原因可能是因为a标签正常是链接的跳转的作用，点击a时可能会重载页面，使用router-link，此标签会被vue所监听，跳转链接时就不会刷新页面了  “router-link”属性1.”:to” 属">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-14T11:28:26.768Z">
+<meta property="og:updated_time" content="2018-06-22T10:01:23.893Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Redux">
-<meta name="twitter:description" content="Redux核心概念 store reducers actions  actions Actions是中包含的是我们发送到store中的数据，或者触发store中的数据更新，而且在redux中actions是store中数据更新的唯一来源。我们使用store.dispatch()来发送actions。   reducers Redux中的action只是表明了在应用中发生了什么，但是并没有对数据st">
+<meta name="twitter:title" content="vue router-view(一)">
+<meta name="twitter:description" content="router-link标签 router-link标签，默认在页面会被渲染成a标签router-link可以渲染为任何元素，这里可以直接渲染成li标签，同样能实现跳转效果，节省了a标签的使用，还有一个原因可能是因为a标签正常是链接的跳转的作用，点击a时可能会重载页面，使用router-link，此标签会被vue所监听，跳转链接时就不会刷新页面了  “router-link”属性1.”:to” 属">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/14/Redux/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/22/vue router-view(一)/"/>
 
 
 
 
 
-  <title>Redux | Little luck</title>
+  <title>vue router-view(一) | Little luck</title>
   
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/14/Redux/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/22/vue router-view(一)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="氧气柠檬🍭">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Redux</h1>
+          <h1 class="post-title" itemprop="name headline">vue router-view(一)</h1>
         
 
         <div class="post-meta">
@@ -272,8 +272,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-14T19:23:50+08:00">
-                2018-06-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-22T17:59:58+08:00">
+                2018-06-22
               </time>
             
 
@@ -315,52 +315,34 @@
       
 
       
-        <h2 id="Redux核心概念"><a href="#Redux核心概念" class="headerlink" title="Redux核心概念"></a>Redux核心概念</h2><ol>
-<li>store</li>
-<li>reducers</li>
-<li>actions</li>
-</ol>
-<h2 id="actions"><a href="#actions" class="headerlink" title="actions"></a>actions</h2><blockquote>
-<p>Actions是中包含的是我们发送到store中的数据，或者触发store中的数据更新，而且在redux中actions是store中数据更新的唯一来源。我们使用store.dispatch()来发送actions。 </p>
+        <h2 id="router-link标签"><a href="#router-link标签" class="headerlink" title="router-link标签"></a>router-link标签</h2><blockquote>
+<p>router-link标签，默认在页面会被渲染成a标签<br>router-link可以渲染为任何元素，这里可以直接渲染成li标签，同样能实现跳转效果，节省了a标签的使用，还有一个原因可能是因为a标签正常是链接的跳转的作用，点击a时可能会重载页面，使用router-link，此标签会被vue所监听，跳转链接时就不会刷新页面了</p>
 </blockquote>
-<h2 id="reducers"><a href="#reducers" class="headerlink" title="reducers"></a>reducers</h2><blockquote>
-<p>Redux中的action只是表明了在应用中发生了什么，但是并没有对数据state进行处理，Reducers就是用来处理数据的。 </p>
+<h2 id="“router-link”属性"><a href="#“router-link”属性" class="headerlink" title="“router-link”属性"></a>“router-link”属性</h2><p>1.”:to” 属 性</p>
+<blockquote>
+<p>可以写成 to=”/“  格式<br>相当于a标签中的”herf”属性，后面跟跳转链接所用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link :to=&quot;/home&quot;&gt;Home&lt;/router-link&gt;</span><br><span class="line">&lt;!-- 渲染结果 --&gt;</span><br><span class="line">&lt;a href=&quot;/home&quot;&gt;Home&lt;/a&gt;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<h2 id="store"><a href="#store" class="headerlink" title="store"></a>store</h2><blockquote>
-<p>Redux中的actions用来表明发生了什么，Reducers基于action来对state进行更新。那么Store就是action和Reducers之间的桥梁。它的功能如下： </p>
+<p>2.”replace” 属 性</p>
+<blockquote>
+<p> replace在routre-link标签中添加后，页面切换时不会留下历史记录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link :to=&quot;/home&quot; replace&gt;&lt;/router-link&gt;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<ul>
-<li>存储应用的所有state </li>
-<li>通过其getState()方法获取state </li>
-<li>通过其dispatch(action)来更新state </li>
-<li>通过其subscribe(listener)来注册监听器 </li>
-<li>取消subscribe(listener)返回的监听器</li>
-<li>替换Reducer  replaceReducer()</li>
-</ul>
-<h2 id="redux的npm安装"><a href="#redux的npm安装" class="headerlink" title="redux的npm安装"></a>redux的npm安装</h2><pre><code>npm i redux -D 
-</code></pre><h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h2><p>1.引入redux</p>
-<pre><code>import { createStore } from &quot;redux&quot;;
-</code></pre><p>2.创建一个纯函数的reducer  写业务逻辑的</p>
-<pre><code>const reducer = function(state, action) {
-            state 一个初始的数据
-                state=[{txt:&apos;呵呵&apos;,id:0,checked:false}]
+<p>3.”tag” 属 性</p>
+<blockquote>
+<p>具有tag属性的router-link会被渲染成相应的标签<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link :to=&quot;/home&quot; tag=&quot;li&quot;&gt;Home&lt;/router-link&gt;</span><br><span class="line">&lt;!-- 渲染结果 --&gt;</span><br><span class="line">&lt;li&gt;Home&lt;/li&gt;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>4.”active-class” 属 性</p>
+<blockquote>
+<p>这个属性是设置激活链接时class属性，也就是当前页面所有与当前地址所匹配的的链接都会被添加class属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link :to=&quot;/home&quot; active-class=&quot;u-link--Active&quot;&gt;Home&lt;/router-link&gt;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>active-class属性的默认值是router-link-active,所以如果没有设置，就会被渲染为这个class</p>
+<p>可以在router.js里面设置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const router = new VueRouter(&#123;</span><br><span class="line">  mode: &apos;hash&apos;,</span><br><span class="line">  linkActiveClass: &apos;u-link--Active&apos;, // 这是链接激活时的class</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>5.”exact” 属 性</p>
+<blockquote>
+<p>开启router-link的严格模式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link :to=&quot;/&quot; exact&gt;home&lt;/router-link&gt;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
 
-            action 执行第几个逻辑  1
-                action.type
-                action.payload
-
-            switch(action){
-                1:
-                    第一个逻辑
-                2::
-                    第二个逻辑
-            }
-            return state;
-        }
-</code></pre><p><code>`</code></p>
-<p>3.创建store</p>
-<pre><code>const store = createStore(reducer);
-</code></pre>
       
     </div>
     
@@ -421,8 +403,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/13/React之生命周期/" rel="next" title="React之生命周期">
-                <i class="fa fa-chevron-left"></i> React之生命周期
+              <a href="/2018/06/20/Vue的指令/" rel="next" title="Vue的指令">
+                <i class="fa fa-chevron-left"></i> Vue的指令
               </a>
             
           </div>
@@ -430,10 +412,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/15/React 各API安装命令/" rel="prev" title="React 各API安装命令">
-                React 各API安装命令 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -567,7 +545,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Redux核心概念"><span class="nav-number">1.</span> <span class="nav-text">Redux核心概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#actions"><span class="nav-number">2.</span> <span class="nav-text">actions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reducers"><span class="nav-number">3.</span> <span class="nav-text">reducers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#store"><span class="nav-number">4.</span> <span class="nav-text">store</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#redux的npm安装"><span class="nav-number">5.</span> <span class="nav-text">redux的npm安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用步骤"><span class="nav-number">6.</span> <span class="nav-text">使用步骤</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#router-link标签"><span class="nav-number">1.</span> <span class="nav-text">router-link标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#“router-link”属性"><span class="nav-number">2.</span> <span class="nav-text">“router-link”属性</span></a></li></ol></div>
             
 
           </div>
