@@ -80,17 +80,17 @@
 
 
 
-<meta name="description" content="源: 域名:www.baidu.com,等同于http:// 119.75.217.109  为ip的别名 端口:类似于不同店铺 协议:http/https,ftp,file..  同源策略(Same origin policy）: 同源策略是浏览器的一个安全功能，不同源的客户端脚本在没有明确授权的情况下，不能读写对方资源。可以说Web是构建在同源策略基础之上的， 浏览器只是针对同源策略的一种实现">
+<meta name="description" content="modules 我们知道如果一个项目非常大的话状态就会非常的多，如果不进行分类处理，所有的状态都维护在一个state里面的话，状态管理就会变得非常的混乱，这样非常不利于项目的后期维护。我们现在前端推崇模块化开发，为的就是提高开发效率和维护效率，避免重复工作。那么vuex是怎么样解决这个问题的呢？Vuex允许我们将store分隔成模块（module），每个模块拥有自己的state，mutation，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="跨域（跨源）(一)">
-<meta property="og:url" content="http://yoursite.com/2018/06/04/跨域（跨源）/index.html">
+<meta property="og:title" content="Vuex之modules">
+<meta property="og:url" content="http://yoursite.com/2018/06/25/Vuex之modules/index.html">
 <meta property="og:site_name" content="Little luck">
-<meta property="og:description" content="源: 域名:www.baidu.com,等同于http:// 119.75.217.109  为ip的别名 端口:类似于不同店铺 协议:http/https,ftp,file..  同源策略(Same origin policy）: 同源策略是浏览器的一个安全功能，不同源的客户端脚本在没有明确授权的情况下，不能读写对方资源。可以说Web是构建在同源策略基础之上的， 浏览器只是针对同源策略的一种实现">
+<meta property="og:description" content="modules 我们知道如果一个项目非常大的话状态就会非常的多，如果不进行分类处理，所有的状态都维护在一个state里面的话，状态管理就会变得非常的混乱，这样非常不利于项目的后期维护。我们现在前端推崇模块化开发，为的就是提高开发效率和维护效率，避免重复工作。那么vuex是怎么样解决这个问题的呢？Vuex允许我们将store分隔成模块（module），每个模块拥有自己的state，mutation，">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-04T01:44:04.010Z">
+<meta property="og:updated_time" content="2018-06-25T14:45:57.991Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="跨域（跨源）(一)">
-<meta name="twitter:description" content="源: 域名:www.baidu.com,等同于http:// 119.75.217.109  为ip的别名 端口:类似于不同店铺 协议:http/https,ftp,file..  同源策略(Same origin policy）: 同源策略是浏览器的一个安全功能，不同源的客户端脚本在没有明确授权的情况下，不能读写对方资源。可以说Web是构建在同源策略基础之上的， 浏览器只是针对同源策略的一种实现">
+<meta name="twitter:title" content="Vuex之modules">
+<meta name="twitter:description" content="modules 我们知道如果一个项目非常大的话状态就会非常的多，如果不进行分类处理，所有的状态都维护在一个state里面的话，状态管理就会变得非常的混乱，这样非常不利于项目的后期维护。我们现在前端推崇模块化开发，为的就是提高开发效率和维护效率，避免重复工作。那么vuex是怎么样解决这个问题的呢？Vuex允许我们将store分隔成模块（module），每个模块拥有自己的state，mutation，">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/04/跨域（跨源）/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/25/Vuex之modules/"/>
 
 
 
 
 
-  <title>跨域（跨源）(一) | Little luck</title>
+  <title>Vuex之modules | Little luck</title>
   
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/04/跨域（跨源）/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/25/Vuex之modules/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="氧气柠檬🍭">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">跨域（跨源）(一)</h1>
+          <h1 class="post-title" itemprop="name headline">Vuex之modules</h1>
         
 
         <div class="post-meta">
@@ -272,8 +272,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-04T09:31:27+08:00">
-                2018-06-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-25T22:44:57+08:00">
+                2018-06-25
               </time>
             
 
@@ -315,34 +315,9 @@
       
 
       
-        <h2 id="源"><a href="#源" class="headerlink" title="源:"></a>源:</h2><ul>
-<li>域名:<a href="http://www.baidu.com,等同于http://" target="_blank" rel="noopener">www.baidu.com,等同于http://</a> 119.75.217.109  为ip的别名</li>
-<li>端口:类似于不同店铺</li>
-<li>协议:http/https,ftp,file..</li>
-</ul>
-<h2 id="同源策略-Same-origin-policy）"><a href="#同源策略-Same-origin-policy）" class="headerlink" title="同源策略(Same origin policy）:"></a>同源策略(Same origin policy）:</h2><blockquote>
-<p>同源策略是浏览器的一个安全功能，不同源的客户端脚本在没有明确授权的情况下，不能读写对方资源。<br>可以说Web是构建在同源策略基础之上的，<br> 浏览器只是针对同源策略的一种实现。</p>
-<p>是为了保证用户信息的安全，防止恶意的网站窃取数据</p>
+        <h2 id="modules"><a href="#modules" class="headerlink" title="modules"></a>modules</h2><blockquote>
+<p>我们知道如果一个项目非常大的话状态就会非常的多，如果不进行分类处理，所有的状态都维护在一个state里面的话，状态管理就会变得非常的混乱，这样非常不利于项目的后期维护。我们现在前端推崇模块化开发，为的就是提高开发效率和维护效率，避免重复工作。那么vuex是怎么样解决这个问题的呢？<br>Vuex允许我们将store分隔成模块（module），每个模块拥有自己的state，mutation，action，getter，甚至是嵌套子模块  具体写法如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &apos;vue&apos;</span><br><span class="line">import Vuex from &apos;vuex&apos;</span><br><span class="line">Vue.use(Vuex);</span><br><span class="line"></span><br><span class="line">const store1 = &#123;</span><br><span class="line">    state:&#123;</span><br><span class="line">        count:0</span><br><span class="line">    &#125;,</span><br><span class="line">    mutations:&#123;</span><br><span class="line">        add(state)&#123;</span><br><span class="line">            state.count ++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    actions:&#123;</span><br><span class="line">        addAsync (&#123; commit &#125;) &#123;</span><br><span class="line">            setTimeout(()=&gt;&#123;</span><br><span class="line">                commit(&apos;add&apos;);</span><br><span class="line">            &#125;,2000);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const store2 = &#123;</span><br><span class="line">    state:&#123;</span><br><span class="line">        count:0</span><br><span class="line">    &#125;,</span><br><span class="line">    mutations:&#123;</span><br><span class="line">        add(state)&#123;</span><br><span class="line">            state.count ++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    actions:&#123;</span><br><span class="line">        addAsync (&#123; commit &#125;) &#123;</span><br><span class="line">            setTimeout(()=&gt;&#123;</span><br><span class="line">                commit(&apos;add&apos;);</span><br><span class="line">            &#125;,2000);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default new Vuex.Store(&#123;</span><br><span class="line">    modules:&#123;</span><br><span class="line">        store1,</span><br><span class="line">        store2 </span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<h2 id="同源"><a href="#同源" class="headerlink" title="同源"></a>同源</h2><p> 同域名、同端口、同协议</p>
-<h2 id="跨源"><a href="#跨源" class="headerlink" title="跨源:"></a>跨源:</h2><p>不同域名、不同端口、不同协议</p>
-<h2 id="解决跨域方案"><a href="#解决跨域方案" class="headerlink" title="解决跨域方案:"></a>解决跨域方案:</h2><p>这里说的js跨域是指通过js在不同的域之间进行数据传输或通信，比如用ajax向一个不同的域请求数据，或者通过js获取页面中不同域的框架中(iframe)的数据。只要协议、域名、端口有任何一个不同，都被当作是不同的域。</p>
-<p> 方法1： 服务器代理</p>
-<p>原理:<br>    a能访问b,b能访问c，就等同于a能访问c<br>    a:前端请求<br>    b:同源下的后端文件<br>    c:第三方数据<br>        比如:<a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a><br>                            <a href="http://www.kaola.com/getSuggestKeyword.html?query=猫&amp;size=10" target="_blank" rel="noopener">http://www.kaola.com/getSuggestKeyword.html?query=猫&amp;size=10</a></p>
-<p>缺点：<br>    第三如果改了，那么你自动也会改</p>
-<p>方法2：   JSONP </p>
-<blockquote>
-<p>JSONP是JSON with Padding的略称，是一个非官方的协议。<br>JSONP实现跨域请求的原理简单的说，就是动态创建<code>&lt;script&gt;</code>标签，然后利用<code>&lt;script&gt;</code>的<code>src</code> 不受同源策略约束来跨域获取数据。</p>
-</blockquote>
-<p>动态创建 <code>&lt;script&gt;</code> 标签，设置其<code>src</code>，回调函数在<code>src</code>中设置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">window.onload = function()&#123;</span><br><span class="line">    document.onclick = function()&#123;</span><br><span class="line">        let oS = document.createElement(&apos;script&apos;);</span><br><span class="line">        oS.src = &apos;https://api.douban.com/v2/book/search?q=javascript&amp;count=1&amp;callback=handleResponse&apos;;</span><br><span class="line">        h.appendChild(oS);</span><br><span class="line">        //fn([1,2,3]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>jsonp  原理总结：</p>
-<ul>
-<li>后端传给前端的数据为函数名 + 括号的 把数据放入括号中</li>
-<li>前端需要在全局放一个函数去接收</li>
-<li>当需要数据的时候，动态创建script标签，通过url的方式去访问后端<pre><code>script标签又能解析js，所以等同于函数调用
-</code></pre>jsonp的优点：<pre><code>兼容非常好
-</code></pre></li>
-</ul>
 
       
     </div>
@@ -404,8 +379,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/03/js eval()函数/" rel="next" title="js eval()函数">
-                <i class="fa fa-chevron-left"></i> js eval()函数
+              <a href="/2018/06/24/Redux(一)/" rel="next" title="Redux(一)">
+                <i class="fa fa-chevron-left"></i> Redux(一)
               </a>
             
           </div>
@@ -413,10 +388,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/04/React入门介绍-JSX/" rel="prev" title="React入门介绍-JSX">
-                React入门介绍-JSX <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -550,7 +521,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#源"><span class="nav-number">1.</span> <span class="nav-text">源:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#同源策略-Same-origin-policy）"><span class="nav-number">2.</span> <span class="nav-text">同源策略(Same origin policy）:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#同源"><span class="nav-number">3.</span> <span class="nav-text">同源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跨源"><span class="nav-number">4.</span> <span class="nav-text">跨源:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决跨域方案"><span class="nav-number">5.</span> <span class="nav-text">解决跨域方案:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#modules"><span class="nav-number">1.</span> <span class="nav-text">modules</span></a></li></ol></div>
             
 
           </div>
