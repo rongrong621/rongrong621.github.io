@@ -80,17 +80,17 @@
 
 
 
-<meta name="description" content="match对象 match是一个匹配路径参数的对象，它有一个属性params，里面的内容就是路径参数，除常用的params属性外，它还有url、path、isExact属性。  通过this.props.match.params.id获取了路径的匹配参数。首页参数home，其他页是other。 Match的获取方式： 在Route component中，组件通过this.props.match获取">
+<meta name="description" content="Vuex概念 专为vue.js应用程序开发的状态管理模式, 采用集中式存储管理应用的所有组件的状态， 以相应的规则保证状态以一种可预测的方式发生变化  安装npm i vuex -D 安装完成后组件里可以引用 import Vue from &amp;apos;vue&amp;apos;; import Vuex from &amp;apos;vuex&amp;apos;; Vue.use(Vuex); 状态 组件内部状态：仅在">
 <meta property="og:type" content="article">
-<meta property="og:title" content="react-router中match对象">
-<meta property="og:url" content="http://yoursite.com/2018/06/09/react-router中match对象/index.html">
+<meta property="og:title" content="Vuex(一)">
+<meta property="og:url" content="http://yoursite.com/2018/06/30/Vuex(一)/index.html">
 <meta property="og:site_name" content="Little luck">
-<meta property="og:description" content="match对象 match是一个匹配路径参数的对象，它有一个属性params，里面的内容就是路径参数，除常用的params属性外，它还有url、path、isExact属性。  通过this.props.match.params.id获取了路径的匹配参数。首页参数home，其他页是other。 Match的获取方式： 在Route component中，组件通过this.props.match获取">
+<meta property="og:description" content="Vuex概念 专为vue.js应用程序开发的状态管理模式, 采用集中式存储管理应用的所有组件的状态， 以相应的规则保证状态以一种可预测的方式发生变化  安装npm i vuex -D 安装完成后组件里可以引用 import Vue from &amp;apos;vue&amp;apos;; import Vuex from &amp;apos;vuex&amp;apos;; Vue.use(Vuex); 状态 组件内部状态：仅在">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-09T14:31:09.218Z">
+<meta property="og:updated_time" content="2018-06-30T04:10:26.156Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="react-router中match对象">
-<meta name="twitter:description" content="match对象 match是一个匹配路径参数的对象，它有一个属性params，里面的内容就是路径参数，除常用的params属性外，它还有url、path、isExact属性。  通过this.props.match.params.id获取了路径的匹配参数。首页参数home，其他页是other。 Match的获取方式： 在Route component中，组件通过this.props.match获取">
+<meta name="twitter:title" content="Vuex(一)">
+<meta name="twitter:description" content="Vuex概念 专为vue.js应用程序开发的状态管理模式, 采用集中式存储管理应用的所有组件的状态， 以相应的规则保证状态以一种可预测的方式发生变化  安装npm i vuex -D 安装完成后组件里可以引用 import Vue from &amp;apos;vue&amp;apos;; import Vuex from &amp;apos;vuex&amp;apos;; Vue.use(Vuex); 状态 组件内部状态：仅在">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/09/react-router中match对象/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/30/Vuex(一)/"/>
 
 
 
 
 
-  <title>react-router中match对象 | Little luck</title>
+  <title>Vuex(一) | Little luck</title>
   
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/09/react-router中match对象/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/30/Vuex(一)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="氧气柠檬🍭">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">react-router中match对象</h1>
+          <h1 class="post-title" itemprop="name headline">Vuex(一)</h1>
         
 
         <div class="post-meta">
@@ -272,8 +272,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-09T22:28:42+08:00">
-                2018-06-09
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-30T12:09:03+08:00">
+                2018-06-30
               </time>
             
 
@@ -315,14 +315,31 @@
       
 
       
-        <h2 id="match对象"><a href="#match对象" class="headerlink" title="match对象"></a>match对象</h2><blockquote>
-<p>match是一个匹配路径参数的对象，它有一个属性<code>params</code>，里面的内容就是路径参数，除常用的<code>params</code>属性外，它还有<code>url、path、isExact</code>属性。</p>
-</blockquote>
-<p>通过this.props.match.params.id获取了路径的匹配参数。首页参数home，其他页是other。</p>
-<h2 id="Match的获取方式："><a href="#Match的获取方式：" class="headerlink" title="Match的获取方式："></a>Match的获取方式：</h2><ul>
-<li>在Route component中，组件通过this.props.match获取.</li>
-<li>在Route render 和Route children中，通过传递一个参数的方式获取。</li>
-</ul>
+        <h2 id="Vuex概念"><a href="#Vuex概念" class="headerlink" title="Vuex概念"></a>Vuex概念</h2><ol>
+<li>专为vue.js应用程序开发的状态管理模式,</li>
+<li>采用集中式存储管理应用的所有组件的状态，</li>
+<li>以相应的规则保证状态以一种可预测的方式发生变化</li>
+</ol>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre><code>npm i vuex -D
+安装完成后组件里可以引用
+import Vue from &apos;vue&apos;;
+import Vuex from &apos;vuex&apos;;
+Vue.use(Vuex);
+</code></pre><h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><ol>
+<li>组件内部状态：仅在一个组件内使用的状态.</li>
+<li>应用级别状态:多个组件公用的状态</li>
+</ol>
+<h2 id="什么情况下使用Vuex"><a href="#什么情况下使用Vuex" class="headerlink" title="什么情况下使用Vuex"></a>什么情况下使用Vuex</h2><p>1.多个视图依赖于同一状态（特指依赖多层嵌套组件的某一状态）<br>2.来自不同视图的行为需要变更同一状态</p>
+<h2 id="Vuex核心概念"><a href="#Vuex核心概念" class="headerlink" title="Vuex核心概念"></a>Vuex核心概念</h2><ol>
+<li>store:类似容器，包含应用的大部分状态</li>
+<li>一个页面只能有一个store</li>
+<li>状态存储是响应式的</li>
+<li>不能直接改变store中的状态，唯一途径是提交（commit）mutations</li>
+<li>State:包含所有应用级别状态的对象</li>
+<li>Actions:包含异步操作、提交mutaions改变状态</li>
+<li>Mutations:唯一修改状态的事件的回调函数</li>
+<li>Modules:将store分割成不同的模块</li>
+</ol>
 
       
     </div>
@@ -384,8 +401,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/04/React入门介绍-JSX/" rel="next" title="React入门介绍-JSX">
-                <i class="fa fa-chevron-left"></i> React入门介绍-JSX
+              <a href="/2018/06/29/数据劫持/" rel="next" title="数据劫持">
+                <i class="fa fa-chevron-left"></i> 数据劫持
               </a>
             
           </div>
@@ -393,10 +410,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/10/React router之exact/" rel="prev" title="React router之exact">
-                React router之exact <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -530,7 +543,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#match对象"><span class="nav-number">1.</span> <span class="nav-text">match对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Match的获取方式："><span class="nav-number">2.</span> <span class="nav-text">Match的获取方式：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vuex概念"><span class="nav-number">1.</span> <span class="nav-text">Vuex概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#状态"><span class="nav-number">3.</span> <span class="nav-text">状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么情况下使用Vuex"><span class="nav-number">4.</span> <span class="nav-text">什么情况下使用Vuex</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vuex核心概念"><span class="nav-number">5.</span> <span class="nav-text">Vuex核心概念</span></a></li></ol></div>
             
 
           </div>
