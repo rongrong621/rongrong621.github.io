@@ -80,17 +80,17 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="关于React-redux Redux是React全家桶的重要一员,Redux是JavaScript的状态容器，Redux的概念简单明了：   应用中所有的状态都是以一个对象树的形式存储在一个单一的store中； 当你想要改变应用的中的状态时，你就要dispatch一个action,这也是唯一的改变state的方法； 通过编写reducer来维护状态，返回新的state,不直接修改原来数据；  R">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2018/05/18/hello-world/index.html">
+<meta property="og:title" content="React redux（一)">
+<meta property="og:url" content="http://yoursite.com/2018/07/01/React redux（一)/index.html">
 <meta property="og:site_name" content="Little luck">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="关于React-redux Redux是React全家桶的重要一员,Redux是JavaScript的状态容器，Redux的概念简单明了：   应用中所有的状态都是以一个对象树的形式存储在一个单一的store中； 当你想要改变应用的中的状态时，你就要dispatch一个action,这也是唯一的改变state的方法； 通过编写reducer来维护状态，返回新的state,不直接修改原来数据；  R">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2017-10-28T00:39:58.000Z">
+<meta property="og:updated_time" content="2018-07-01T03:49:14.141Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="React redux（一)">
+<meta name="twitter:description" content="关于React-redux Redux是React全家桶的重要一员,Redux是JavaScript的状态容器，Redux的概念简单明了：   应用中所有的状态都是以一个对象树的形式存储在一个单一的store中； 当你想要改变应用的中的状态时，你就要dispatch一个action,这也是唯一的改变state的方法； 通过编写reducer来维护状态，返回新的state,不直接修改原来数据；  R">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/18/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/01/React redux（一)/"/>
 
 
 
 
 
-  <title>Hello World | Little luck</title>
+  <title>React redux（一) | Little luck</title>
   
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/18/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/01/React redux（一)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="氧气柠檬🍭">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">React redux（一)</h1>
         
 
         <div class="post-meta">
@@ -272,8 +272,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-18T15:23:11+08:00">
-                2018-05-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-01T11:48:07+08:00">
+                2018-07-01
               </time>
             
 
@@ -315,15 +315,18 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h2 id="关于React-redux"><a href="#关于React-redux" class="headerlink" title="关于React-redux"></a>关于React-redux</h2><blockquote>
+<p>Redux是React全家桶的重要一员,Redux是JavaScript的状态容器，Redux的概念简单明了：</p>
+</blockquote>
+<ol>
+<li>应用中所有的状态都是以一个对象树的形式存储在一个单一的store中；</li>
+<li>当你想要改变应用的中的状态时，你就要dispatch一个action,这也是唯一的改变state的方法；</li>
+<li>通过编写reducer来维护状态，返回新的state,不直接修改原来数据；</li>
+</ol>
+<h2 id="Redux-的作用"><a href="#Redux-的作用" class="headerlink" title="Redux 的作用"></a>Redux 的作用</h2><blockquote>
+<p>在React中，数据的传递主要采用state和props，props得由父级分发下来，而state是组件中可自行管理的状态，这意味着React并没有让数据回溯的能力，数据只能单向向下分发，或者自行内部处理，举一个简单的例子，父组件可以使用props向子组件传递数据，子组件可以通过触发回调函数来改变父组件的状态，如果是那种没有嵌套关系的组件，该如何来实现通信呢？为了解决这个问题,Redux的方法就是将store放在根目录顶层组件中，一层层往下分发给各子组件,在子组件中进行调用，Redux的作用是让状态变得更加可预测、并且更容易管理。</p>
+<p>Redux由Flux框架演变而来，但在Flux的基础上Redux改变了整个框架中某些角色的作用，例如在Flux中你可以拥有多个store，每个store存储自己对应的那部分状态,在Redux中，你只能维护一个store,存储了整个应用的所有状态，Redux更倾向于把store分发下去，dispatch action的时候，reducer根据状态对象的key值再将store进行拆分，reducer能拿到store中对应的那一部分进行处理，Redux提供createStore、combineReducers、applyMiddleware等一系列方法来配合React-redux使用帮我们更好的对这个store进行管理</p>
+</blockquote>
 
       
     </div>
@@ -385,15 +388,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/06/30/Vuex(一)/" rel="next" title="Vuex(一)">
+                <i class="fa fa-chevron-left"></i> Vuex(一)
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/29/封装数组的方法/" rel="prev" title="数组封装方法">
-                数组封装方法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -527,7 +530,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于React-redux"><span class="nav-number">1.</span> <span class="nav-text">关于React-redux</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redux-的作用"><span class="nav-number">2.</span> <span class="nav-text">Redux 的作用</span></a></li></ol></div>
             
 
           </div>
