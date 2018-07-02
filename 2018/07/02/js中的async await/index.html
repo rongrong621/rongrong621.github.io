@@ -80,17 +80,17 @@
 
 
 
-<meta name="description" content="关于React-redux Redux是React全家桶的重要一员,Redux是JavaScript的状态容器，Redux的概念简单明了：   应用中所有的状态都是以一个对象树的形式存储在一个单一的store中； 当你想要改变应用的中的状态时，你就要dispatch一个action,这也是唯一的改变state的方法； 通过编写reducer来维护状态，返回新的state,不直接修改原来数据；  R">
+<meta name="description" content="async await简介 async顾名思义是“异步”的意思，async用于声明一个函数是异步的。而await从字面意思上是“等待”的意思，就是用于等待异步完成。并且await只能在async函数中使用async / await是ES7的重要特性之一  特性 async用来申明里面包裹的内容可以进行同步的方式执行，await则是进行执行顺序控制，每次执行一个await，程序都会暂停等待await">
 <meta property="og:type" content="article">
-<meta property="og:title" content="React redux（一)">
-<meta property="og:url" content="http://yoursite.com/2018/07/01/React redux（一)/index.html">
+<meta property="og:title" content="js中的async await">
+<meta property="og:url" content="http://yoursite.com/2018/07/02/js中的async await/index.html">
 <meta property="og:site_name" content="Little luck">
-<meta property="og:description" content="关于React-redux Redux是React全家桶的重要一员,Redux是JavaScript的状态容器，Redux的概念简单明了：   应用中所有的状态都是以一个对象树的形式存储在一个单一的store中； 当你想要改变应用的中的状态时，你就要dispatch一个action,这也是唯一的改变state的方法； 通过编写reducer来维护状态，返回新的state,不直接修改原来数据；  R">
+<meta property="og:description" content="async await简介 async顾名思义是“异步”的意思，async用于声明一个函数是异步的。而await从字面意思上是“等待”的意思，就是用于等待异步完成。并且await只能在async函数中使用async / await是ES7的重要特性之一  特性 async用来申明里面包裹的内容可以进行同步的方式执行，await则是进行执行顺序控制，每次执行一个await，程序都会暂停等待await">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-01T04:04:08.641Z">
+<meta property="og:updated_time" content="2018-07-02T14:41:58.250Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="React redux（一)">
-<meta name="twitter:description" content="关于React-redux Redux是React全家桶的重要一员,Redux是JavaScript的状态容器，Redux的概念简单明了：   应用中所有的状态都是以一个对象树的形式存储在一个单一的store中； 当你想要改变应用的中的状态时，你就要dispatch一个action,这也是唯一的改变state的方法； 通过编写reducer来维护状态，返回新的state,不直接修改原来数据；  R">
+<meta name="twitter:title" content="js中的async await">
+<meta name="twitter:description" content="async await简介 async顾名思义是“异步”的意思，async用于声明一个函数是异步的。而await从字面意思上是“等待”的意思，就是用于等待异步完成。并且await只能在async函数中使用async / await是ES7的重要特性之一  特性 async用来申明里面包裹的内容可以进行同步的方式执行，await则是进行执行顺序控制，每次执行一个await，程序都会暂停等待await">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/01/React redux（一)/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/02/js中的async await/"/>
 
 
 
 
 
-  <title>React redux（一) | Little luck</title>
+  <title>js中的async await | Little luck</title>
   
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/01/React redux（一)/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/02/js中的async await/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="氧气柠檬🍭">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">React redux（一)</h1>
+          <h1 class="post-title" itemprop="name headline">js中的async await</h1>
         
 
         <div class="post-meta">
@@ -272,8 +272,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-01T11:48:07+08:00">
-                2018-07-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-02T22:41:04+08:00">
+                2018-07-02
               </time>
             
 
@@ -315,18 +315,19 @@
       
 
       
-        <h2 id="关于React-redux"><a href="#关于React-redux" class="headerlink" title="关于React-redux"></a>关于React-redux</h2><blockquote>
-<p>Redux是React全家桶的重要一员,Redux是JavaScript的状态容器，Redux的概念简单明了：</p>
+        <h2 id="async-await简介"><a href="#async-await简介" class="headerlink" title="async await简介"></a>async await简介</h2><blockquote>
+<p>async顾名思义是“异步”的意思，async用于声明一个函数是异步的。而await从字面意思上是“等待”的意思，就是用于等待异步完成。并且await只能在async函数中使用<br>async / await是ES7的重要特性之一</p>
 </blockquote>
-<ol>
-<li>应用中所有的状态都是以一个对象树的形式存储在一个单一的store中；</li>
-<li>当你想要改变应用的中的状态时，你就要dispatch一个action,这也是唯一的改变state的方法；</li>
-<li>通过编写reducer来维护状态，返回新的state,不直接修改原来数据；</li>
+<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ol>
+<li>async用来申明里面包裹的内容可以进行同步的方式执行，await则是进行执行顺序控制，每次执行一个await，程序都会暂停等待await返回值，然后再执行之后的await。</li>
+<li>await后面调用的函数需要返回一个promise，该promise的reosolve值就是函数return的值。</li>
+<li>await只能用在async函数之中，用在普通函数中会报错。</li>
+<li>await命令后面的 Promise 对象，运行结果可能是 rejected，所以最好把 await 命令放在 try…catch 代码块中</li>
+<li>async/await与Promise一样，是非阻塞的。</li>
+<li>使用async、await完成异步操作代码可读与写法上更像是同步的，也更容易让人理解。</li>
+<li>async/await是写异步代码的新方式，以前的方法有回调函数和Promise。</li>
+<li>async/await是基于Promise实现的，它不能用于普通的回调函数。</li>
 </ol>
-<h2 id="Redux-的作用"><a href="#Redux-的作用" class="headerlink" title="Redux 的作用"></a>Redux 的作用</h2><blockquote>
-<p>在React中，数据的传递主要采用state和props，props得由父级分发下来，而state是组件中可自行管理的状态，这意味着React并没有让数据回溯的能力，数据只能单向向下分发，或者自行内部处理，举一个简单的例子，父组件可以使用props向子组件传递数据，子组件可以通过触发回调函数来改变父组件的状态，如果是那种没有嵌套关系的组件，该如何来实现通信呢？为了解决这个问题,Redux的方法就是将store放在根目录顶层组件中，一层层往下分发给各子组件,在子组件中进行调用，Redux的作用是让状态变得更加可预测、并且更容易管理。</p>
-<p>Redux由Flux框架演变而来，但在Flux的基础上Redux改变了整个框架中某些角色的作用，例如在Flux中你可以拥有多个store，每个store存储自己对应的那部分状态,在Redux中，你只能维护一个store,存储了整个应用的所有状态，Redux更倾向于把store分发下去，dispatch action的时候，reducer根据状态对象的key值再将store进行拆分，reducer能拿到store中对应的那一部分进行处理，Redux提供createStore、combineReducers、applyMiddleware等一系列方法来配合React-redux使用帮我们更好的对这个store进行管理</p>
-</blockquote>
 
       
     </div>
@@ -388,8 +389,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/30/Vuex(一)/" rel="next" title="Vuex(一)">
-                <i class="fa fa-chevron-left"></i> Vuex(一)
+              <a href="/2018/07/01/React redux（一)/" rel="next" title="React redux（一)">
+                <i class="fa fa-chevron-left"></i> React redux（一)
               </a>
             
           </div>
@@ -397,10 +398,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/02/js中的async await/" rel="prev" title="js中的async await">
-                js中的async await <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -534,7 +531,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于React-redux"><span class="nav-number">1.</span> <span class="nav-text">关于React-redux</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redux-的作用"><span class="nav-number">2.</span> <span class="nav-text">Redux 的作用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#async-await简介"><span class="nav-number">1.</span> <span class="nav-text">async await简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特性"><span class="nav-number">2.</span> <span class="nav-text">特性</span></a></li></ol></div>
             
 
           </div>
