@@ -80,17 +80,17 @@
 
 
 
-<meta name="description" content="exact exact是Route下的一条属性，一般而言，react路由会匹配所有匹配到的路由组价，exact能够使得路由的匹配更严格一些。 exact的值为bool型，为true是表示严格匹配，为false时为正常匹配。 如在exact为true时，’/link’与’/’是不匹配的，但是在false的情况下它们又是匹配的  以下代码示例123&amp;lt;Route path=&amp;apos;/&amp;apos">
+<meta name="description" content="js中的this指向十分重要，了解js中this指向是每一个学习js的人必学的知识点  1.全局作用域或者普通函数中this指向全局对象window123456789101112131415//直接打印console.log(this) //window//function声明函数function bar () &amp;#123;console.log(this)&amp;#125;bar() //windo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="React router之exact">
-<meta property="og:url" content="http://yoursite.com/2018/06/10/React router之exact/index.html">
+<meta property="og:title" content="js中的this 指向">
+<meta property="og:url" content="http://yoursite.com/2018/07/07/js中的this 指向/index.html">
 <meta property="og:site_name" content="Little luck">
-<meta property="og:description" content="exact exact是Route下的一条属性，一般而言，react路由会匹配所有匹配到的路由组价，exact能够使得路由的匹配更严格一些。 exact的值为bool型，为true是表示严格匹配，为false时为正常匹配。 如在exact为true时，’/link’与’/’是不匹配的，但是在false的情况下它们又是匹配的  以下代码示例123&amp;lt;Route path=&amp;apos;/&amp;apos">
+<meta property="og:description" content="js中的this指向十分重要，了解js中this指向是每一个学习js的人必学的知识点  1.全局作用域或者普通函数中this指向全局对象window123456789101112131415//直接打印console.log(this) //window//function声明函数function bar () &amp;#123;console.log(this)&amp;#125;bar() //windo">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-10T14:59:27.504Z">
+<meta property="og:updated_time" content="2018-07-07T14:40:15.155Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="React router之exact">
-<meta name="twitter:description" content="exact exact是Route下的一条属性，一般而言，react路由会匹配所有匹配到的路由组价，exact能够使得路由的匹配更严格一些。 exact的值为bool型，为true是表示严格匹配，为false时为正常匹配。 如在exact为true时，’/link’与’/’是不匹配的，但是在false的情况下它们又是匹配的  以下代码示例123&amp;lt;Route path=&amp;apos;/&amp;apos">
+<meta name="twitter:title" content="js中的this 指向">
+<meta name="twitter:description" content="js中的this指向十分重要，了解js中this指向是每一个学习js的人必学的知识点  1.全局作用域或者普通函数中this指向全局对象window123456789101112131415//直接打印console.log(this) //window//function声明函数function bar () &amp;#123;console.log(this)&amp;#125;bar() //windo">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/10/React router之exact/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/07/js中的this 指向/"/>
 
 
 
 
 
-  <title>React router之exact | Little luck</title>
+  <title>js中的this 指向 | Little luck</title>
   
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/10/React router之exact/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/07/js中的this 指向/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="氧气柠檬🍭">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">React router之exact</h1>
+          <h1 class="post-title" itemprop="name headline">js中的this 指向</h1>
         
 
         <div class="post-meta">
@@ -272,8 +272,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-10T22:56:12+08:00">
-                2018-06-10
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-07T22:39:08+08:00">
+                2018-07-07
               </time>
             
 
@@ -315,39 +315,13 @@
       
 
       
-        <h2 id="exact"><a href="#exact" class="headerlink" title="exact"></a>exact</h2><ul>
-<li>exact是Route下的一条属性，一般而言，react路由会匹配所有匹配到的路由组价，exact能够使得路由的匹配更严格一些。</li>
-<li>exact的值为bool型，为true是表示严格匹配，为false时为正常匹配。</li>
-<li>如在exact为true时，’/link’与’/’是不匹配的，但是在false的情况下它们又是匹配的</li>
-</ul>
-<p>以下代码示例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;Route path=&apos;/&apos; component=&#123;Home&#125; /&gt;</span><br><span class="line">&lt;Route path=&apos;/page&apos; component=&#123;Page&#125;&gt;</span><br><span class="line">//这种情况下，如果匹配路由path=&apos;/page&apos;，那么会把Home也会展示出来。</span><br></pre></td></tr></table></figure></p>
-<p>所以我们经常添加exact来解决上述问题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;Route exact path=&apos;/&apos; component=&#123;Home&#125; /&gt;</span><br><span class="line">&lt;Route path=&apos;/page&apos; component=&#123;Page&#125; /&gt;</span><br></pre></td></tr></table></figure></p>
-<p>综合以上得出结论如下：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">path</th>
-<th style="text-align:center">location.pathname</th>
-<th style="text-align:center">exact</th>
-<th style="text-align:center">matches?</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"> /one</td>
-<td style="text-align:center">/one/two</td>
-<td style="text-align:center">true</td>
-<td style="text-align:center">no</td>
-</tr>
-<tr>
-<td style="text-align:center">/one</td>
-<td style="text-align:center">/one/two</td>
-<td style="text-align:center">false</td>
-<td style="text-align:center">yes </td>
-</tr>
-</tbody>
-</table>
-
+        <blockquote>
+<p>js中的this指向十分重要，了解js中this指向是每一个学习js的人必学的知识点</p>
+</blockquote>
+<h2 id="1-全局作用域或者普通函数中this指向全局对象window"><a href="#1-全局作用域或者普通函数中this指向全局对象window" class="headerlink" title="1.全局作用域或者普通函数中this指向全局对象window"></a>1.全局作用域或者普通函数中this指向全局对象window</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//直接打印</span><br><span class="line">console.log(this) //window</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//function声明函数</span><br><span class="line">function bar () &#123;console.log(this)&#125;</span><br><span class="line">bar() //window</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//function声明函数赋给变量</span><br><span class="line">var bar = function () &#123;console.log(this)&#125;</span><br><span class="line">bar() //window</span><br><span class="line"></span><br><span class="line">//自执行函数</span><br><span class="line">(function () &#123;console.log(this)&#125;)(); //window</span><br></pre></td></tr></table></figure>
+<h2 id="2-方法调用中谁调用this指向谁"><a href="#2-方法调用中谁调用this指向谁" class="headerlink" title="2.方法调用中谁调用this指向谁"></a>2.方法调用中谁调用this指向谁</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">//对象方法调用</span><br><span class="line">var person = &#123;</span><br><span class="line">    run: function () &#123;console.log(this)&#125;</span><br><span class="line">&#125;</span><br><span class="line">person.run() // person</span><br><span class="line"></span><br><span class="line">//事件绑定</span><br><span class="line">var btn = document.querySelector(&quot;button&quot;)</span><br><span class="line">btn.onclick = function () &#123;</span><br><span class="line">    console.log(this) // btn</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//事件监听</span><br><span class="line">var btn = document.querySelector(&quot;button&quot;)</span><br><span class="line">btn.addEventListener(&apos;click&apos;, function () &#123;</span><br><span class="line">   console.log(this) //btn</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">//jquery的ajax</span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    self: this,</span><br><span class="line">    type:&quot;get&quot;,</span><br><span class="line">    url: url,</span><br><span class="line">    async:true,</span><br><span class="line">    success: function (res) &#123;</span><br><span class="line">        console.log(this) // this指向传入$.ajxa()中的对象</span><br><span class="line">        console.log(self) // window</span><br><span class="line">    &#125;</span><br><span class="line">   &#125;);</span><br><span class="line">   //这里说明以下，将代码简写为$.ajax（obj） ，this指向obj,在obj中this指向window，因为在在success方法中，独享obj调用自己，所以this指向obj</span><br></pre></td></tr></table></figure>
+<h2 id="3-在构造函数或者构造函数原型对象中this指向构造函数的实例"><a href="#3-在构造函数或者构造函数原型对象中this指向构造函数的实例" class="headerlink" title="3.在构造函数或者构造函数原型对象中this指向构造函数的实例"></a>3.在构造函数或者构造函数原型对象中this指向构造函数的实例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//不使用new指向window</span><br><span class="line">function Person (name) &#123;</span><br><span class="line">    console.log(this) // window</span><br><span class="line">    this.name = name;</span><br><span class="line">&#125;</span><br><span class="line">Person(&apos;inwe&apos;)</span><br><span class="line">//使用new</span><br><span class="line">function Person (name) &#123;</span><br><span class="line">      this.name = name</span><br><span class="line">      console.log(this) //people</span><br><span class="line">      self = this</span><br><span class="line">  &#125;</span><br><span class="line">  var people = new Person(&apos;iwen&apos;)</span><br><span class="line">  console.log(self === people) //true</span><br><span class="line">//这里new改变了this指向，将this由window指向Person的实例对象people</span><br></pre></td></tr></table></figure>
+<h2 id="4-使用ES6的箭头函数"><a href="#4-使用ES6的箭头函数" class="headerlink" title="4.使用ES6的箭头函数"></a>4.使用ES6的箭头函数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var name = &quot;window.name&quot;;</span><br><span class="line">        var obj = &#123;</span><br><span class="line">           name : &quot;obj.name&quot;,</span><br><span class="line">            getName:function()&#123;</span><br><span class="line">               console.log(this.name);</span><br><span class="line">               return () =&gt; &#123;</span><br><span class="line">                   console.log(this.name);</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       obj.getName()();    //  &quot;obj.name&quot;    &quot;obj.name&quot;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -408,8 +382,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/09/react-router中match对象/" rel="next" title="react-router中match对象">
-                <i class="fa fa-chevron-left"></i> react-router中match对象
+              <a href="/2018/07/06/MongoDB/" rel="next" title="MongoDB">
+                <i class="fa fa-chevron-left"></i> MongoDB
               </a>
             
           </div>
@@ -417,10 +391,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/12/React Router(一)/" rel="prev" title="React Router(一)">
-                React Router(一) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -554,7 +524,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#exact"><span class="nav-number">1.</span> <span class="nav-text">exact</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-全局作用域或者普通函数中this指向全局对象window"><span class="nav-number">1.</span> <span class="nav-text">1.全局作用域或者普通函数中this指向全局对象window</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-方法调用中谁调用this指向谁"><span class="nav-number">2.</span> <span class="nav-text">2.方法调用中谁调用this指向谁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-在构造函数或者构造函数原型对象中this指向构造函数的实例"><span class="nav-number">3.</span> <span class="nav-text">3.在构造函数或者构造函数原型对象中this指向构造函数的实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-使用ES6的箭头函数"><span class="nav-number">4.</span> <span class="nav-text">4.使用ES6的箭头函数</span></a></li></ol></div>
             
 
           </div>
