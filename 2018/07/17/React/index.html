@@ -80,17 +80,17 @@
 
 
 
-<meta name="description" content="1.引入 required 模块我们使用 require 指令来载入 http 模块，并将实例化的 HTTP 赋值给变量 http，实例如下: const http=require(&amp;apos;http&amp;apos;); 创建服务器使用 http.createServer() 方法创建服务器，并使用 listen 方法绑定 80 端口。 函数通过 request, response 参数来接收和响应">
+<meta name="description" content="简介：React 是一个用于构建用户界面的 JAVASCRIPT 库。React主要用于构建UI 特点： 声明式设计 −React采用声明范式，可以轻松描述应用。 高效 −React通过对DOM的模拟，最大限度地减少与DOM的交互 灵活 −React可以与已知的库或框架很好地配合 组件 − 通过 React构建组件，使得代码更加容易得到复用，能够很好的应用在大项目的开发中 单向响应的数据流-Rea">
 <meta property="og:type" content="article">
-<meta property="og:title" content="创建 Node.js 应用(基础)">
-<meta property="og:url" content="http://yoursite.com/2018/06/26/创建 Node.js 应用(基础)/index.html">
+<meta property="og:title" content="React">
+<meta property="og:url" content="http://yoursite.com/2018/07/17/React/index.html">
 <meta property="og:site_name" content="Little luck">
-<meta property="og:description" content="1.引入 required 模块我们使用 require 指令来载入 http 模块，并将实例化的 HTTP 赋值给变量 http，实例如下: const http=require(&amp;apos;http&amp;apos;); 创建服务器使用 http.createServer() 方法创建服务器，并使用 listen 方法绑定 80 端口。 函数通过 request, response 参数来接收和响应">
+<meta property="og:description" content="简介：React 是一个用于构建用户界面的 JAVASCRIPT 库。React主要用于构建UI 特点： 声明式设计 −React采用声明范式，可以轻松描述应用。 高效 −React通过对DOM的模拟，最大限度地减少与DOM的交互 灵活 −React可以与已知的库或框架很好地配合 组件 − 通过 React构建组件，使得代码更加容易得到复用，能够很好的应用在大项目的开发中 单向响应的数据流-Rea">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-26T14:34:25.494Z">
+<meta property="og:updated_time" content="2018-07-17T14:31:36.493Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="创建 Node.js 应用(基础)">
-<meta name="twitter:description" content="1.引入 required 模块我们使用 require 指令来载入 http 模块，并将实例化的 HTTP 赋值给变量 http，实例如下: const http=require(&amp;apos;http&amp;apos;); 创建服务器使用 http.createServer() 方法创建服务器，并使用 listen 方法绑定 80 端口。 函数通过 request, response 参数来接收和响应">
+<meta name="twitter:title" content="React">
+<meta name="twitter:description" content="简介：React 是一个用于构建用户界面的 JAVASCRIPT 库。React主要用于构建UI 特点： 声明式设计 −React采用声明范式，可以轻松描述应用。 高效 −React通过对DOM的模拟，最大限度地减少与DOM的交互 灵活 −React可以与已知的库或框架很好地配合 组件 − 通过 React构建组件，使得代码更加容易得到复用，能够很好的应用在大项目的开发中 单向响应的数据流-Rea">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/26/创建 Node.js 应用(基础)/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/17/React/"/>
 
 
 
 
 
-  <title>创建 Node.js 应用(基础) | Little luck</title>
+  <title>React | Little luck</title>
   
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/26/创建 Node.js 应用(基础)/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/17/React/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="氧气柠檬🍭">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">创建 Node.js 应用(基础)</h1>
+          <h1 class="post-title" itemprop="name headline">React</h1>
         
 
         <div class="post-meta">
@@ -272,8 +272,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-26T22:30:36+08:00">
-                2018-06-26
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-17T22:30:21+08:00">
+                2018-07-17
               </time>
             
 
@@ -315,11 +315,14 @@
       
 
       
-        <h2 id="1-引入-required-模块"><a href="#1-引入-required-模块" class="headerlink" title="1.引入 required 模块"></a>1.引入 required 模块</h2><p>我们使用 require 指令来载入 http 模块，并将实例化的 HTTP 赋值给变量 http，实例如下:</p>
-<pre><code>const http=require(&apos;http&apos;);
-</code></pre><h2 id="创建服务器"><a href="#创建服务器" class="headerlink" title="创建服务器"></a>创建服务器</h2><p>使用 http.createServer() 方法创建服务器，并使用 listen 方法绑定 80 端口。 函数通过 request, response 参数来接收和响应数据。<br>在项目的根目录下创建一个叫 app.js 的文件，并写入以下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const http=require(&apos;http&apos;);</span><br><span class="line">http.createServer((request,response)=&gt;&#123;</span><br><span class="line">   response.writeHead(200,&#123;&quot;Content-Type&quot;:&quot;text/plain;charset=UTF-8&quot;&#125;);</span><br><span class="line">    response.write(&apos;呵呵&apos;);</span><br><span class="line">    response.end();</span><br><span class="line">&#125;).listen(80);</span><br></pre></td></tr></table></figure></p>
-<h2 id="3-使用-node-命令执行以上的代码："><a href="#3-使用-node-命令执行以上的代码：" class="headerlink" title="3.使用 node 命令执行以上的代码："></a>3.使用 node 命令执行以上的代码：</h2><pre><code>node app.js
-</code></pre><p>接下来浏览器访问 location:80   就会有  呵呵</p>
+        <h2 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h2><p>React 是一个用于构建用户界面的 JAVASCRIPT 库。<br>React主要用于构建UI</p>
+<h2 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h2><ul>
+<li>声明式设计 −React采用声明范式，可以轻松描述应用。</li>
+<li>高效 −React通过对DOM的模拟，最大限度地减少与DOM的交互</li>
+<li>灵活 −React可以与已知的库或框架很好地配合</li>
+<li>组件 − 通过 React构建组件，使得代码更加容易得到复用，能够很好的应用在大项目的开发中</li>
+<li>单向响应的数据流-React实现了单向响应的数据流，从而减少了重复代码，这也是它为什么比传统数据绑定更简单。</li>
+</ul>
 
       
     </div>
@@ -381,8 +384,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/25/Vuex之modules/" rel="next" title="Vuex之modules">
-                <i class="fa fa-chevron-left"></i> Vuex之modules
+              <a href="/2018/07/15/es6之let和const/" rel="next" title="es6之let和const">
+                <i class="fa fa-chevron-left"></i> es6之let和const
               </a>
             
           </div>
@@ -390,10 +393,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/27/Fetch异步请求/" rel="prev" title="Fetch异步请求">
-                Fetch异步请求 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -527,7 +526,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-引入-required-模块"><span class="nav-number">1.</span> <span class="nav-text">1.引入 required 模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建服务器"><span class="nav-number">2.</span> <span class="nav-text">创建服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-使用-node-命令执行以上的代码："><span class="nav-number">3.</span> <span class="nav-text">3.使用 node 命令执行以上的代码：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介："><span class="nav-number">1.</span> <span class="nav-text">简介：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特点："><span class="nav-number">2.</span> <span class="nav-text">特点：</span></a></li></ol></div>
             
 
           </div>
